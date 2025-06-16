@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2022", // Updated to ES2022 fow consistency wif wib
+    "lib": ["ES2022", "DOM", "DOM.Iterable"], // Updated to ES2022
+    "module": "ESNext",
+    "moduleResolution": "Node", // Use "Node" fow modewn bundwews
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    /* JSX Options */
+    "jsx": "react-jsx", // Use "react-jsx" fow automatic JSX wuntime
+
+    /* Stwict Type-Checking Options */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Advanced Options */
+    "allowImportingTsExtensions": true,
+    "noEmit": true, // Disabwe emitting JS fiwes (used wif bundwews)
+    "types": ["@react-three/fiber"] // Specific types to incwude
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
