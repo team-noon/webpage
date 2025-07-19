@@ -133,7 +133,7 @@ function Index(): JSX.Element {
                         </div>
                     </div>
                     {/* OUR PREVIOUS COMPETITIONS - HISTORY */}
-                    <div className="bg-surface-800/70  translate-y-5" id="history">
+                    <div className="bg-surface-800/70  translate-y-5" id="docs">
                         <div className="font-mono underline underline-offset-2 text-4xl my-8">
                             Previous Competitions
                         </div>

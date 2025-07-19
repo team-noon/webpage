@@ -36,8 +36,8 @@ export default function Topbar({ scrollOffset, appear, isMobile }: Topbar): JSX.
                     </a>
                 </div>
                 <div className="flex-1/12">
-                    <a href="/#history" id="topbar">
-                        History
+                    <a href="/#docs" id="topbar">
+                        Documentation
                     </a>
                 </div>
                 <div className="flex-1/2">
