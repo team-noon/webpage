@@ -1,8 +1,16 @@
 import Floor from "./Floor"
 import Object from "./Object"
 
-export default function Background(): JSX.Element {
+interface Background{
+  offset : number,
+  maxOffset : number, 
+  scrollMaxHeight : number
+}
 
+
+
+export default function Background({offset, maxOffset, scrollMaxHeight} : Background): JSX.Element {
+    
 
     return (<>
         <directionalLight position={[0, 1.5, 0]}

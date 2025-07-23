@@ -19,7 +19,7 @@ const router = createHashRouter([{
   path: "about",
   element: (<Index/>)
 },{
-  path: "sponsors",
+  path: "contact",
   element: (<Index/>)
 }])
 
