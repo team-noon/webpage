@@ -1,0 +1,13 @@
+@import "../../../index.css";
+
+#titleText {
+    overflow: hidden;
+    border-right-width: 5px;
+
+    animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--color-primary-500); }
+}

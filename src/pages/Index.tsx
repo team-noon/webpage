@@ -2,6 +2,7 @@ import { lazy, useEffect, useState } from "react";
 import Topbar from "../components/TopbarMain";
 import ScrollDown from "../components/ScrollDown";
 import colors from "../colors";
+import TitleComp from "../components/Title/TitleComp";
 
 const Experience = lazy(() => import('../components/Experience'))
 const Background = lazy(() => import("../3dcomponents/Background"))
@@ -119,9 +120,9 @@ function Index(): JSX.Element {
                 {/* TITLE SCREEN */}
                 <div className="flex place-content-center items-center relative min-h-screen" id="index">
                     <div className="md:text-9xl text-5xl bg-clip-text text-transparent select-none font-stretch-50% bg-gradient-to-r from-primary-300 to-primary-700 font-mono -translate-y-44 ">
-                        Hu-More-Bot
+                        <TitleComp/>
                     </div>
-                    <ScrollDown scrollOffset={offset} disappear={100} color={colors.warning500} />
+                    <ScrollDown scrollOffset={offset} disappear={100} color={colors.primary500} />
                 </div>
                 {/* the actual content */}
                 <div className="*:border-t *:border-surface-900  *:text-primary-100 *:text-justify *:pt-12 *:items-center *:flex *:flex-col *:rounded-t-3xl *:min-h-screen">
