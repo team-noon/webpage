@@ -11,7 +11,8 @@ const End: JSX.Element = (<>
     <span id="titleTopDomain">.hu</span>
 </>)
 
-const timeDelay : number = 15
+const timeDelay : number = 5 // number of cycles before it actually starts typing it
+const typeSpeed : number = 150 // in ms
 
 export default function TitleComp() {
     const [curStep, setCurStep] = useState(1)
@@ -26,17 +27,19 @@ export default function TitleComp() {
                     return prev
                 }
             })
-        }, 150) // 200ms
+        }, typeSpeed)
 
         return () => clearInterval(interval)
     }, [])
 
     return (
-        <div id="titleText" >
+
+        <div id="titleText" className=" md:text-9xl text-5xl bg-clip-text text-transparent select-none font-stretch-50% bg-gradient-to-r from-primary-300 to-primary-700 font-mono -translate-y-44 flex items-center" >
             
             {curStep -timeDelay< text.length
-                ? (<>{text.substring(0, curStep - 15)}</>)
+                ? (<>{text.substring(0, curStep - timeDelay)}</>)
                 : End}
         </div>
+    
     )
 }

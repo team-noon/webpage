@@ -3,11 +3,12 @@
 #titleText {
     overflow: hidden;
     border-right-width: 5px;
-
-    animation: blink-caret .75s step-end infinite;
+    min-width: 1px;
+    animation: blink-caret .65s step-end infinite; /*THIS NEEDS TO BE floor(((TIMEDELAY+12)*TYPESPEED/1000)/0.75)*/
 }
 
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: var(--color-primary-500); }
 }
+

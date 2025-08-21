@@ -3,6 +3,7 @@ import Topbar from "../components/TopbarMain";
 import ScrollDown from "../components/ScrollDown";
 import colors from "../colors";
 import TitleComp from "../components/Title/TitleComp";
+import Member from "../components/Member";
 
 const Experience = lazy(() => import('../components/Experience'))
 const Background = lazy(() => import("../3dcomponents/Background"))
@@ -119,9 +120,9 @@ function Index(): JSX.Element {
             <div className="max-h-screen max-w-screen min-h-screen min-w-screen overflow-y-auto  absolute z-10  top-0" id="content" onScroll={handleScroll}>
                 {/* TITLE SCREEN */}
                 <div className="flex place-content-center items-center relative min-h-screen" id="index">
-                    <div className="md:text-9xl text-5xl bg-clip-text text-transparent select-none font-stretch-50% bg-gradient-to-r from-primary-300 to-primary-700 font-mono -translate-y-44 ">
+                    
                         <TitleComp/>
-                    </div>
+                    
                     <ScrollDown scrollOffset={offset} disappear={100} color={colors.primary500} />
                 </div>
                 {/* the actual content */}
@@ -133,6 +134,7 @@ function Index(): JSX.Element {
                         </div>
                         <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg pb-8">
                             We are a RoboCup team representing Hungary. Our team formed in 2025 and our first competition will be the Humanoid kid size robot soccer competition in the summer of 2026.
+                            <Member imgSource="https://assets.azpreps365.com/program-operators/logos/128x128/xavier-prep-gators-5268ea.png" description="lacoste"/>
                         </div>
                     </div>
                     {/* OUR PREVIOUS COMPETITIONS - HISTORY */}
