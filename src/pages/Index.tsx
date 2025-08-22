@@ -135,14 +135,14 @@ function Index(): JSX.Element {
                         <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg pb-8">
                             We are a RoboCup team representing Hungary. Our team formed in 2025 and our first competition will be the Humanoid kid size robot soccer competition in the summer of 2026.
                         </div>
-                        <div className="max-w-screen md:w-5xl">
+                        <div className="max-w-screen md:w-3xl flex-col [&>*:nth-child(odd)]:justify-self-end ">
                             <Member imgSource="pictures/hema-no-bg.png" description="Electrical Design and Embedded Development" name="Nyilas Mátyás" github="https://github.com/Hema2-official" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Web Development, Outreach, and Machine learning" name="Varga Miklós" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Electrical Design, Embedded Development and 3D design" name="Virgo Sámuel" github="https://github.com/orgs/team-noon/people/samthedev32" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Multimedia and Creative Designer" name="Kara Ádám" github="https://github.com/AdyStudios" />
+                            <Member imgSource="pictures/hema-no-bg.png" description="Web Development, Outreach, and Machine learning" name="Varga Miklós" github="https://github.com/Utelagazkodas" />
+                            <Member imgSource="pictures/hema-no-bg.png" description="Electrical Design, Embedded Development and 3D design" name="Virgo Sámuel" github="https://github.com/samthedev32" />
+                            <Member imgSource="pictures/hema-no-bg.png" description="Multimedia and Creative Designer" name="Kara Ádám" website="http://adytm.eu/" github="https://github.com/AdyStudios" />
                             <Member imgSource="pictures/hema-no-bg.png" description="Tactics Development and 3D Design" name="Beni" github="https://github.com/vBenii" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Tactics Development and 3D Design" name="Zétény" github="https://github.com/orgs/team-noon/people/Gaplaster3600" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Web Development" name="Somfai Máté" github="https://github.com/orgs/team-noon/people/TheRealMattHUN" />
+                            <Member imgSource="pictures/hema-no-bg.png" description="Tactics Development and 3D Design" name="Zétény" github="https://github.com/Gaplaster3600" />
+                            <Member imgSource="pictures/hema-no-bg.png" description="Web Development" name="Somfai Máté" github="https://github.com/TheRealMattHUN" />
                         </div>
                     </div>
                     {/* OUR PREVIOUS COMPETITIONS - HISTORY */}
@@ -156,30 +156,31 @@ function Index(): JSX.Element {
                     </div>
                     {/* FOR SPONSORS SECTION */}
                     <div className="bg-surface-900/80 backdrop-blur-xl" id="contact">
-                        <div className="font-mono underline underline-offset-2 text-4xl my-8">
-                            Perks of being a sponsor include:
+                        <div className="font-mono underline underline-offset-2 md:text-5xl text-4xl my-8">
+                            Contact
                         </div>
-                        <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg ">
-                            <div>
-                                <div>
-                                    A spot on our T-Shirt
-                                </div>
-                                <div>
-                                    Every Sponsor will get a spot on our T-Shirts that we will wear almost every day to the European and the International rounds of the competitions.
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    A spot in our On Stage performance
-                                </div>
-                                <div>
-                                    We will get a stickers that have the logos of our sponsors on them, and because we are making race cars this year we will put them on the cars like on the real F1 cars!
-                                </div>
+                        <div className="max-w-screen  md:w-4xl p-4 text-base text-justify md:text-center md:text-lg ">
+                            <div className="md:text-2xl text-xl pb-3 ">
+                                You can contact us at: <a href="mailto:team@no-on.hu" className="text-primary-400">team@no-on.hu</a>
+
+                                <hr className="mx-20" />
                             </div>
 
+                            We’d be happy to answer your questions — feel free to reach out!”
+                            <br />
+                            <br />
+                            We are currently looking for sponsors, in return we will put your logo on our shirt, on our website AND on our robot. Since RoboCup is a huge international competition with a lot of like minded people it's a good opportunity for some publicity! (and we would appreciate it very much {"<3"})
                         </div>
                     </div>
+
                 </div>
+                {/* FOOTER */}
+                <div className="border-t border-surface-500 text-surface-500 md:mx-40">
+                    <div className="font-mono text-center p-1">
+                        © {new Date().getFullYear()} Team Noon. All rights reserved.
+                    </div>
+                </div>
+
             </div>
             <Experience className="transition-none" width="100vw" height="100vh">
                 <Background offset={offset} maxOffset={maxOffset} scrollMaxHeight={scrollMaxHeight} />
