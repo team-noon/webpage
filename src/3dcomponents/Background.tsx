@@ -9,7 +9,7 @@ interface Background{
 
 
 
-export default function Background({offset, maxOffset, scrollMaxHeight} : Background): JSX.Element {
+export default function Background({} : Background): JSX.Element {
     
 
     return (<>

@@ -68,8 +68,8 @@ export default function Topbar({ scrollOffset, appear, isMobile }: Topbar): JSX.
             <button className="ml-5" onClick={openDrawer}>
                 <MdMenu color={colors.secondary200.hex} size={"25px"} />
             </button>
-            <div className="text-center font-mono font-stretch-50% font-light" >
-                Hu-More-Bot
+            <div className="text-center font-mono font-stretch-50% font-light min-w-[120px]" >
+                no-on
             </div>
             <a className="flex-1/2" href="/#" id="topbar">
                 <SVG svgType={svgs.monoLogo} id="indexButton" size={25} />
@@ -104,7 +104,7 @@ export default function Topbar({ scrollOffset, appear, isMobile }: Topbar): JSX.
 
                 </div>
                 <div className="flex   place-content-center border-t-2  items-center pb-16 pt-8 mx-10 ">
-                    <a href="https://github.com/hu-more-bot" className="flex text-xl">
+                    <a href="https://github.com/team-noon" className="flex text-xl">
 
                         Github <FiGithub size={"25px"} className="ml-4" />
                     </a>

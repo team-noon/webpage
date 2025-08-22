@@ -37,7 +37,7 @@ function Index(): JSX.Element {
 
         setOffset(event.currentTarget.scrollTop)
 
-        if(event.currentTarget.scrollTop > maxOffset){
+        if (event.currentTarget.scrollTop > maxOffset) {
             setMaxOffset(event.currentTarget.scrollTop)
         }
     }
@@ -120,9 +120,9 @@ function Index(): JSX.Element {
             <div className="max-h-screen max-w-screen min-h-screen min-w-screen overflow-y-auto  absolute z-10  top-0" id="content" onScroll={handleScroll}>
                 {/* TITLE SCREEN */}
                 <div className="flex place-content-center items-center relative min-h-screen" id="index">
-                    
-                        <TitleComp/>
-                    
+
+                    <TitleComp />
+
                     <ScrollDown scrollOffset={offset} disappear={100} color={colors.primary500} />
                 </div>
                 {/* the actual content */}
@@ -134,7 +134,15 @@ function Index(): JSX.Element {
                         </div>
                         <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg pb-8">
                             We are a RoboCup team representing Hungary. Our team formed in 2025 and our first competition will be the Humanoid kid size robot soccer competition in the summer of 2026.
-                            <Member imgSource="https://assets.azpreps365.com/program-operators/logos/128x128/xavier-prep-gators-5268ea.png" description="lacoste"/>
+                        </div>
+                        <div className="max-w-screen md:w-5xl">
+                            <Member imgSource="pictures/hema-no-bg.png" description="Electrical Design and Embedded Development" name="Nyilas Mátyás" github="https://github.com/Hema2-official" />
+                            <Member imgSource="pictures/hema-no-bg.png" description="Web Development, Outreach, and Machine learning" name="Varga Miklós" />
+                            <Member imgSource="pictures/hema-no-bg.png" description="Electrical Design, Embedded Development and 3D design" name="Virgo Sámuel" github="https://github.com/orgs/team-noon/people/samthedev32" />
+                            <Member imgSource="pictures/hema-no-bg.png" description="Multimedia and Creative Designer" name="Kara Ádám" github="https://github.com/AdyStudios" />
+                            <Member imgSource="pictures/hema-no-bg.png" description="Tactics Development and 3D Design" name="Beni" github="https://github.com/vBenii" />
+                            <Member imgSource="pictures/hema-no-bg.png" description="Tactics Development and 3D Design" name="Zétény" github="https://github.com/orgs/team-noon/people/Gaplaster3600" />
+                            <Member imgSource="pictures/hema-no-bg.png" description="Web Development" name="Somfai Máté" github="https://github.com/orgs/team-noon/people/TheRealMattHUN" />
                         </div>
                     </div>
                     {/* OUR PREVIOUS COMPETITIONS - HISTORY */}
@@ -174,7 +182,7 @@ function Index(): JSX.Element {
                 </div>
             </div>
             <Experience className="transition-none" width="100vw" height="100vh">
-                <Background offset={offset} maxOffset={maxOffset} scrollMaxHeight={scrollMaxHeight}/>
+                <Background offset={offset} maxOffset={maxOffset} scrollMaxHeight={scrollMaxHeight} />
             </Experience>
         </div>
     );
