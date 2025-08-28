@@ -47,7 +47,7 @@ export default function Topbar({ scrollOffset, appear, isMobile }: Topbar): JSX.
                     </a>
                 </div>
 
-                <a href="https://github.com/hu-more-bot" className="border-l-2 w-25 flex place-content-center">
+                <a href="https://github.com/team-noon" className="border-l-2 w-25 flex place-content-center">
                     <FiGithub size={"25px"} />
                 </a>
 

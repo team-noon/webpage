@@ -136,13 +136,49 @@ function Index(): JSX.Element {
                             We are a RoboCup team representing Hungary. Our team formed in 2025 and our first competition will be the Humanoid kid size robot soccer competition in the summer of 2026.
                         </div>
                         <div className="max-w-screen md:w-3xl flex-col [&>*:nth-child(odd)]:justify-self-end ">
-                            <Member imgSource="pictures/hema-no-bg.png" description="Electrical Design and Embedded Development" name="Nyilas Mátyás" github="https://github.com/Hema2-official" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Web Development, Outreach, and Machine learning" name="Varga Miklós" github="https://github.com/Utelagazkodas" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Electrical Design, Embedded Development and 3D design" name="Virgo Sámuel" github="https://github.com/samthedev32" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Multimedia and Creative Designer" name="Kara Ádám" website="http://adytm.eu/" github="https://github.com/AdyStudios" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Tactics Development and 3D Design" name="Beni" github="https://github.com/vBenii" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Tactics Development and 3D Design" name="Zétény" github="https://github.com/Gaplaster3600" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Web Development" name="Somfai Máté" github="https://github.com/TheRealMattHUN" />
+                            <Member
+                                imgSource="pictures/hema-no-bg.png"
+                                description="Multimedia and Creative Designer"
+                                name="Ádám Kara"
+                                website="http://adytm.eu/"
+                                github="https://github.com/AdyStudios"
+                            />
+                            <Member
+                                imgSource="pictures/hema-no-bg.png"
+                                description="Tactics Development and 3D Design"
+                                name="Benedek Varga"
+                                github="https://github.com/vBenii"
+                            />
+                            <Member
+                                imgSource="pictures/hema-no-bg.png"
+                                description="Electrical Design and Embedded Development"
+                                name="Mátyás Nyilas"
+                                github="https://github.com/Hema2-official"
+                            />
+                            <Member
+                                imgSource="pictures/hema-no-bg.png"
+                                description="Web Development"
+                                name="Máté Somfai"
+                                github="https://github.com/TheRealMattHUN"
+                            />
+                            <Member
+                                imgSource="pictures/hema-no-bg.png"
+                                description="Web Development, Outreach, and Machine learning"
+                                name="Miklós Varga"
+                                github="https://github.com/Utelagazkodas"
+                            />
+                            <Member
+                                imgSource="pictures/hema-no-bg.png"
+                                description="Electrical Design, Embedded Development and 3D design"
+                                name="Sámuel Virgo"
+                                github="https://github.com/samthedev32"
+                            />
+                            <Member
+                                imgSource="pictures/hema-no-bg.png"
+                                description="Tactics Development and 3D Design"
+                                name="Zétény Fenyvesvölgyi"
+                                github="https://github.com/Gaplaster3600"
+                            />
                         </div>
                     </div>
                     {/* OUR PREVIOUS COMPETITIONS - HISTORY */}
@@ -169,7 +205,7 @@ function Index(): JSX.Element {
                             We’d be happy to answer your questions — feel free to reach out!”
                             <br />
                             <br />
-                            We are currently looking for sponsors, in return we will put your logo on our shirt, on our website AND on our robot. Since RoboCup is a huge international competition with a lot of like minded people it's a good opportunity for some publicity! (and we would appreciate it very much {"<3"})
+                            We are currently looking for sponsors, in return we will put your logo on our shirt, on our website AND on our robot. Since RoboCup is a huge international competition with a lot of like minded people it's a good opportunity for some publicity!
                         </div>
                     </div>
 
