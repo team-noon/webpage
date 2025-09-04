@@ -137,44 +137,46 @@ function Index(): JSX.Element {
                         </div>
                         <div className="max-w-screen md:w-3xl flex-col [&>*:nth-child(odd)]:justify-self-end ">
                             <Member
-                                imgSource="pictures/hema-no-bg.png"
+                                imgSource="pictures/members/kara-no-bg.png"
                                 description="Multimedia and Creative Designer"
                                 name="Ádám Kara"
                                 website="http://adytm.eu/"
                                 github="https://github.com/AdyStudios"
+                                imgClass="object-bottom object-cover"
                             />
                             <Member
-                                imgSource="pictures/hema-no-bg.png"
+                                imgSource="pictures/members/hema-no-bg.png"
                                 description="Tactics Development and 3D Design"
                                 name="Benedek Varga"
                                 github="https://github.com/vBenii"
                             />
                             <Member
-                                imgSource="pictures/hema-no-bg.png"
+                                imgSource="pictures/members/hema-no-bg.png"
                                 description="Electrical Design and Embedded Development"
                                 name="Mátyás Nyilas"
                                 github="https://github.com/Hema2-official"
+                                imgClass="object-centers object-cover"
                             />
                             <Member
-                                imgSource="pictures/hema-no-bg.png"
+                                imgSource="pictures/members/hema-no-bg.png"
                                 description="Web Development"
                                 name="Máté Somfai"
                                 github="https://github.com/TheRealMattHUN"
                             />
                             <Member
-                                imgSource="pictures/hema-no-bg.png"
+                                imgSource="pictures/members/hema-no-bg.png"
                                 description="Web Development, Outreach, and Machine learning"
                                 name="Miklós Varga"
                                 github="https://github.com/Utelagazkodas"
                             />
                             <Member
-                                imgSource="pictures/hema-no-bg.png"
+                                imgSource="pictures/members/hema-no-bg.png"
                                 description="Electrical Design, Embedded Development and 3D design"
                                 name="Sámuel Virgo"
                                 github="https://github.com/samthedev32"
                             />
                             <Member
-                                imgSource="pictures/hema-no-bg.png"
+                                imgSource="pictures/members/hema-no-bg.png"
                                 description="Tactics Development and 3D Design"
                                 name="Zétény Fenyvesvölgyi"
                                 github="https://github.com/Gaplaster3600"
@@ -186,14 +188,21 @@ function Index(): JSX.Element {
                         <div className="font-mono underline underline-offset-2 text-4xl my-8">
                             A bit about our robot
                         </div>
-                        asds
+                        
                         <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg text-pink-50">
                             <div>
                                 <div>
                                     The Hardware
                                 </div>
                                 <div>
-                                    
+                                    <div>Electronics</div>
+                                    <div>
+                                    For the hardware we will be making our own custom PCBs that will be mounted in the head and the body of the robot. But for now we are just working on a dev board where we will be able to work out all of the quirks of the CPU and the motors and their drivers.
+                                    </div>
+                                    <div>The Body</div>
+                                    <div>
+                                        The body of the robot will be made of carbon fiber rods and custom 3D printed parts (FDM and SLA). The render you can see in the background of the website is just a mockup of our robot where the proportions of it are about right, it was made mostly for the balancing training.
+                                    </div>
                                 </div>
                             </div>
                             <div>
@@ -201,7 +210,7 @@ function Index(): JSX.Element {
                                     Tactics
                                 </div>
                                 <div>
-                                    We are currently working on a <a href="https://github.com/team-noon/tactics-sim"></a>
+                                    We are currently working on a <a href="https://github.com/team-noon/tactics-sim">Tactics Simulation</a> software, where we will be able to test and develop our tactic that will be controlling our robots in the real competition. 
                                 </div>
                             </div>
                             <div>
@@ -209,9 +218,11 @@ function Index(): JSX.Element {
                                     Balancing
                                 </div>
                                 <div>
-
+                                    For the balancing and the walking part of the robot, we are making our own environment in unity where we will be able to train a neural network to not fall over even when any outside forces act on the robot.
                                 </div>
                             </div>
+
+                            <a href="docs.no-on.hu">Read more on our docs page</a>
                         </div>
                     </div>
                     {/* Contacts  */}

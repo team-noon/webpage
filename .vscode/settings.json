@@ -9,7 +9,7 @@
         "**/node_modules": true,
         "**/.eslintrc.cjs": true,
         "**/package-lock.json": true,
-        "**/package.json": true,
+        "**/package.json": false,
         "**/README.md": true,
         "**/.gitignore": true,
         "**/tsconfig.json": true,
