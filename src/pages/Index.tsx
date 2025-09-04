@@ -181,16 +181,40 @@ function Index(): JSX.Element {
                             />
                         </div>
                     </div>
-                    {/* OUR PREVIOUS COMPETITIONS - HISTORY */}
+                    {/* The yapp about our robot */}
                     <div className="  translate-y-5" id="docs">
                         <div className="font-mono underline underline-offset-2 text-4xl my-8">
                             A bit about our robot
                         </div>
-                        <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg ">
+                        asds
+                        <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg text-pink-50">
+                            <div>
+                                <div>
+                                    The Hardware
+                                </div>
+                                <div>
+                                    
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    Tactics
+                                </div>
+                                <div>
+                                    We are currently working on a <a href="https://github.com/team-noon/tactics-sim"></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    Balancing
+                                </div>
+                                <div>
 
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    {/* FOR SPONSORS SECTION */}
+                    {/* Contacts  */}
                     <div className="bg-surface-900/80 backdrop-blur-xl" id="contact">
                         <div className="font-mono underline underline-offset-2 md:text-5xl text-4xl my-8">
                             Contact
@@ -202,7 +226,7 @@ function Index(): JSX.Element {
                                 <hr className="mx-20" />
                             </div>
 
-                            We’d be happy to answer your questions — feel free to reach out!”
+                            We’d be happy to answer your questions — feel free to reach out!
                             <br />
                             <br />
                             We are currently looking for sponsors, in return we will put your logo on our shirt, on our website AND on our robot. Since RoboCup is a huge international competition with a lot of like minded people it's a good opportunity for some publicity!

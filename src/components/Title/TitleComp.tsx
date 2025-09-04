@@ -11,8 +11,8 @@ const End: JSX.Element = (<>
     <span id="titleTopDomain">.hu</span>
 </>)
 
-const timeDelay : number = 5 // number of cycles before it actually starts typing it
-const typeSpeed : number = 150 // in ms
+const timeDelay: number = 5 // number of cycles before it actually starts typing it
+const typeSpeed: number = 150 // in ms
 
 export default function TitleComp() {
     const [curStep, setCurStep] = useState(1)
@@ -20,7 +20,7 @@ export default function TitleComp() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurStep(prev => {
-                if (prev - timeDelay< text.length) {
+                if (prev - timeDelay < text.length) {
                     return prev + 1
                 } else {
                     clearInterval(interval)
@@ -34,12 +34,21 @@ export default function TitleComp() {
 
     return (
 
-        <div id="titleText" className=" md:text-9xl text-5xl bg-clip-text text-transparent select-none font-stretch-50% bg-gradient-to-r from-primary-300 to-primary-700 font-mono -translate-y-44 flex items-center" >
-            
-            {curStep -timeDelay< text.length
-                ? (<>{text.substring(0, curStep - timeDelay)}</>)
-                : End}
+        <div className="flex items-center -translate-y-44 z-10">
+            <span
+                id="titleText"
+                className="
+      md:text-9xl text-5xl font-mono select-none inline-block leading-[1.1]
+      bg-gradient-to-r from-primary-300 to-primary-700
+      text-transparent bg-clip-text
+      [background-clip:text] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]
+    "
+            >
+                {curStep - timeDelay < text.length
+                    ? (<>{text.substring(0, curStep - timeDelay)}</>)
+                    : End}
+            </span>
         </div>
-    
+
     )
 }
