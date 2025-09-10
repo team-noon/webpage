@@ -128,15 +128,21 @@ function Index(): JSX.Element {
                 {/* the actual content */}
                 <div className="*:border-t *:border-surface-900  *:text-primary-100 *:text-justify *:pt-12 *:items-center *:flex *:flex-col *:rounded-t-3xl *:min-h-screen">
                     {/* ABOUT US SECTION */}
-                    <div className="bg-surface-700/60 translate-y-5 backdrop-blur-xl" id="about">
+                    <div className="bg-surface-700/60  backdrop-blur-sm" id="about">
                         <div className="font-mono underline underline-offset-2 text-4xl my-8">
                             About Us
                         </div>
                         <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg pb-8">
                             We are a RoboCup team representing Hungary. Our team formed in 2025 and our first competition will be the Humanoid kid size robot soccer competition in the summer of 2026.
+                            <br />
+                            We believe in open source software (and hardware) so you can access anything we do on <a href="https://github.com/team-noon" className="underline">our github page</a>
+                            <br />
+                            We look ahead to working on our robot from year to year making improvements and learning along the way.
                         </div>
+                        br
                         <div className="max-w-screen md:w-3xl flex-col [&>*:nth-child(odd)]:justify-self-end ">
                             <Member
+
                                 imgSource="pictures/members/kara-no-bg.png"
                                 description="Multimedia and Creative Designer"
                                 name="Ádám Kara"
@@ -180,53 +186,56 @@ function Index(): JSX.Element {
                                 description="Tactics Development and 3D Design"
                                 name="Zétény Fenyvesvölgyi"
                                 github="https://github.com/Gaplaster3600"
+                                zeteny={true}
                             />
                         </div>
                     </div>
                     {/* The yapp about our robot */}
-                    <div className="  translate-y-5" id="docs">
+                    <div className="translate-y-5" id="docs">
                         <div className="font-mono underline underline-offset-2 text-4xl my-8">
-                            A bit about our robot
+                            A Bit About Our Robot
                         </div>
-                        
-                        <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg text-pink-50">
+
+                        <div className="max-w-screen md:w-4xl p-4 text-sm md:text-lg text-pink-50 font-normal">
+
                             <div>
-                                <div>
-                                    The Hardware
-                                </div>
-                                <div>
-                                    <div>Electronics</div>
-                                    <div>
-                                    For the hardware we will be making our own custom PCBs that will be mounted in the head and the body of the robot. But for now we are just working on a dev board where we will be able to work out all of the quirks of the CPU and the motors and their drivers.
-                                    </div>
-                                    <div>The Body</div>
-                                    <div>
-                                        The body of the robot will be made of carbon fiber rods and custom 3D printed parts (FDM and SLA). The render you can see in the background of the website is just a mockup of our robot where the proportions of it are about right, it was made mostly for the balancing training.
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    Tactics
-                                </div>
-                                <div>
-                                    We are currently working on a <a href="https://github.com/team-noon/tactics-sim">Tactics Simulation</a> software, where we will be able to test and develop our tactic that will be controlling our robots in the real competition. 
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    Balancing
-                                </div>
-                                <div>
-                                    For the balancing and the walking part of the robot, we are making our own environment in unity where we will be able to train a neural network to not fall over even when any outside forces act on the robot.
+                                <div className="font-semibold text-center">Hardware</div>
+                                <div className="mt-2">
+                                    <div className="font-medium">Electronics</div>
+                                    <p>
+                                        We’re designing custom PCBs that will be mounted in both the head and body of the robot. For now, we’re prototyping on a development board to work out the quirks of the CPU, motors, and drivers.
+                                    </p>
+                                    <div className="font-medium mt-3">Body</div>
+                                    <p>
+                                        The robot’s frame will use carbon fiber rods combined with custom 3D-printed parts (both FDM and SLA). The render you see in the website background is a mockup with roughly correct proportions, created primarily for balancing tests.
+                                    </p>
                                 </div>
                             </div>
 
-                            <a href="docs.no-on.hu">Read more on our docs page</a>
+                            <div className="mt-6">
+                                <div className="font-semibold text-center">Tactics</div>
+                                <p>
+                                    We’re developing a <a href="https://github.com/team-noon/tactics-sim" className="underline">Tactics Simulation</a> tool to test and refine strategies that will control our robots during real competitions.
+                                </p>
+                            </div>
+
+                            <div className="mt-6">
+                                <div className="font-semibold text-center">Balancing</div>
+                                <p>
+                                    To train our robot to walk and stay balanced—even under external forces—we’re building a custom Unity environment. This setup allows us to train a neural network for robust balance control.
+                                    Explore the <a href="https://github.com/team-noon/balancing-sim" className="underline">source code here</a>.
+                                </p>
+                            </div>
+
+                            <div className="my-8 text-center text-xl">
+                                <a href="https://docs.no-on.hu" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop">Read more on our docs page</a>
+                            </div>
+
                         </div>
                     </div>
+
                     {/* Contacts  */}
-                    <div className="bg-surface-900/80 backdrop-blur-xl" id="contact">
+                    <div className="bg-surface-900/80 backdrop-blur-sm" id="contact">
                         <div className="font-mono underline underline-offset-2 md:text-5xl text-4xl my-8">
                             Contact
                         </div>
