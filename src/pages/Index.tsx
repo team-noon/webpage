@@ -4,6 +4,8 @@ import ScrollDown from "../components/ScrollDown";
 import colors from "../colors";
 import TitleComp from "../components/Title/TitleComp";
 import Member from "../components/Member";
+import Draggable from "../3dcomponents/Draggable";
+import { RobotModel } from "../3dcomponents/Mockup assembly";
 
 const Experience = lazy(() => import('../components/Experience'))
 const Background = lazy(() => import("../3dcomponents/Background"))
@@ -126,21 +128,24 @@ function Index(): JSX.Element {
                     <ScrollDown scrollOffset={offset} disappear={100} color={colors.primary500} />
                 </div>
                 {/* the actual content */}
-                <div className="*:border-t *:border-surface-900  *:text-primary-100 *:text-justify *:pt-12 *:items-center *:flex *:flex-col *:rounded-t-3xl *:min-h-screen">
+                <div className=" *:border-surface-900  *:text-primary-100 *:text-justify *:pt-12 *:items-center *:flex *:flex-col *:rounded-t-3xl *:min-h-screen">
                     {/* ABOUT US SECTION */}
-                    <div className="bg-surface-700/60  backdrop-blur-sm" id="about">
+                    <div className="bg-surface-700/60 border-t  backdrop-blur-sm pb-10" id="about">
                         <div className="font-mono underline underline-offset-2 text-4xl my-8">
                             About Us
                         </div>
                         <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg pb-8">
                             We are a RoboCup team representing Hungary. Our team formed in 2025 and our first competition will be the Humanoid kid size robot soccer competition in the summer of 2026.
-                            <br />
-                            We believe in open source software (and hardware) so you can access anything we do on <a href="https://github.com/team-noon" className="underline">our github page</a>
-                            <br />
+                            <br /> <br />
+                            We believe in open source software (and hardware) so you can access anything we do on <a href="https://github.com/team-noon" className="underline">our Github page</a>!
+                            <br /> <br />
                             We look ahead to working on our robot from year to year making improvements and learning along the way.
                         </div>
-                        br
-                        <div className="max-w-screen md:w-3xl flex-col [&>*:nth-child(odd)]:justify-self-end ">
+                        <div className="text-4xl font-mono ">
+                            Our members
+                        </div>
+                        <hr className="md:w-[600px] w-screen mb-10"/>
+                        <div className="max-w-screen md:w-3xl flex *:m-3 flex-wrap place-content-around">
                             <Member
 
                                 imgSource="pictures/members/kara-no-bg.png"
@@ -165,7 +170,7 @@ function Index(): JSX.Element {
                             />
                             <Member
                                 imgSource="pictures/members/hema-no-bg.png"
-                                description="Web Development"
+                                description="Web Development and Tactics Simulation"
                                 name="Máté Somfai"
                                 github="https://github.com/TheRealMattHUN"
                             />
@@ -186,7 +191,7 @@ function Index(): JSX.Element {
                                 description="Tactics Development and 3D Design"
                                 name="Zétény Fenyvesvölgyi"
                                 github="https://github.com/Gaplaster3600"
-                                zeteny={true}
+                                isZeteny={true}
                             />
                         </div>
                     </div>
@@ -207,7 +212,12 @@ function Index(): JSX.Element {
                                     </p>
                                     <div className="font-medium mt-3">Body</div>
                                     <p>
-                                        The robot’s frame will use carbon fiber rods combined with custom 3D-printed parts (both FDM and SLA). The render you see in the website background is a mockup with roughly correct proportions, created primarily for balancing tests.
+                                        The robot’s frame will use carbon fiber rods combined with custom 3D-printed parts (both FDM and SLA). The render you see in the website background (and below) is a mockup with roughly correct proportions, created primarily for balancing tests.
+                                        <div className="bg-surface-950 border rounded-lg h-[200px] w-[200px]">
+                                        <Draggable >
+                                            <RobotModel/>
+                                        </Draggable>
+                                        </div>
                                     </p>
                                 </div>
                             </div>
@@ -235,7 +245,7 @@ function Index(): JSX.Element {
                     </div>
 
                     {/* Contacts  */}
-                    <div className="bg-surface-900/80 backdrop-blur-sm" id="contact">
+                    <div className="bg-surface-900/80 backdrop-blur-sm border-t" id="contact">
                         <div className="font-mono underline underline-offset-2 md:text-5xl text-4xl my-8">
                             Contact
                         </div>
