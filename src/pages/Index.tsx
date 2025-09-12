@@ -196,7 +196,7 @@ function Index(): JSX.Element {
                         </div>
                     </div>
                     {/* The yapp about our robot */}
-                    <div className="translate-y-5" id="docs">
+                    <div className="border-y bg-surface-800/60 backdrop-blur-sm" id="docs">
                         <div className="font-mono underline underline-offset-2 text-4xl my-8">
                             A Bit About Our Robot
                         </div>
@@ -213,9 +213,9 @@ function Index(): JSX.Element {
                                     <div className="font-medium mt-3">Body</div>
                                     <p>
                                         The robot’s frame will use carbon fiber rods combined with custom 3D-printed parts (both FDM and SLA). The render you see in the website background (and below) is a mockup with roughly correct proportions, created primarily for balancing tests.
-                                        <div className="bg-surface-950 border rounded-lg h-[200px] w-[200px]">
-                                        <Draggable >
-                                            <RobotModel/>
+                                        <div className="bg-surface-950 border rounded-lg h-[200px] w-[200px] ">
+                                        <Draggable>
+                                            <RobotModel rotation={[Math.PI/-3, 0,0]} scale={[3,3,3]} position={[0,0.2,0]}/>
                                         </Draggable>
                                         </div>
                                     </p>

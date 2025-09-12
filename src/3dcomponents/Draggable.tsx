@@ -10,7 +10,7 @@ interface Draggable {
 
 export default function Draggable({ children, clickable }: Draggable): JSX.Element {
     return (
-        <div className="relative w-[700px] h-[85vh] max-w-full max-h-screen">
+        <div className="relative w-[200px] h-[200px] max-w-full max-h-screen">
             {/* Canvas */}
             <Canvas
                 camera={{
@@ -28,8 +28,8 @@ export default function Draggable({ children, clickable }: Draggable): JSX.Eleme
                 {children}
             </Canvas>
 
-            <div className="absolute bottom-16 left-4">
-                <TbRotate360 size={35} title="Rotate the model by dragging it!"/>
+            <div className="absolute bottom-4 left-4">
+                <TbRotate360 size={30} title="Rotate the model by dragging it!"/>
             </div>
 
             {clickable &&
