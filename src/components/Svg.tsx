@@ -1,7 +1,7 @@
 
 export enum svgs{
-    monoLogo = "/pictures/logo_monochrome.svg",
-    Logo = "/pictures/logo.svg"
+    monoLogo = "/pictures/logos/noonLogoLight.svg",
+    Logo = "/pictures/logos/noonLogoDark.svg"
 }
 
 export default function SVG({svgType, size, id} : {svgType : svgs, size : number, id? : string}){

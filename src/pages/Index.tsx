@@ -128,9 +128,9 @@ function Index(): JSX.Element {
                     <ScrollDown scrollOffset={offset} disappear={100} color={colors.primary500} />
                 </div>
                 {/* the actual content */}
-                <div className=" *:border-surface-900  *:text-primary-100 *:text-justify *:pt-12 *:items-center *:flex *:flex-col *:rounded-t-3xl *:min-h-screen">
+                <div className=" *:border-surface-900 *:border-y-2 *:text-primary-100 *:text-justify *:pt-12 *:items-center *:flex *:flex-col  *:min-h-screen">
                     {/* ABOUT US SECTION */}
-                    <div className="bg-surface-700/60 border-t  backdrop-blur-sm pb-10" id="about">
+                    <div className="bg-surface-700/60 border-t rounded-t-2xl backdrop-blur-sm pb-10" id="about">
                         <div className="font-mono underline underline-offset-2 text-4xl my-8">
                             About Us
                         </div>
@@ -144,7 +144,7 @@ function Index(): JSX.Element {
                         <div className="text-4xl font-mono ">
                             Our members
                         </div>
-                        <hr className="md:w-[600px] w-screen mb-10"/>
+                        <hr className="md:w-[600px] w-screen mb-10" />
                         <div className="max-w-screen md:w-3xl flex *:m-3 flex-wrap place-content-around">
                             <Member
 
@@ -213,10 +213,15 @@ function Index(): JSX.Element {
                                     <div className="font-medium mt-3">Body</div>
                                     <p>
                                         The robot’s frame will use carbon fiber rods combined with custom 3D-printed parts (both FDM and SLA). The render you see in the website background (and below) is a mockup with roughly correct proportions, created primarily for balancing tests.
-                                        <div className="bg-surface-950 border rounded-lg h-[200px] w-[200px] ">
-                                        <Draggable>
-                                            <RobotModel rotation={[Math.PI/-3, 0,0]} scale={[3,3,3]} position={[0,0.2,0]}/>
-                                        </Draggable>
+                                        <div className="flex items-center justify-center">
+                                            <div className="bg-surface-950 border rounded-lg  w-[200px]  m-5">
+                                                <Draggable>
+                                                    <RobotModel rotation={[Math.PI / -3, 0, 0]} scale={[3, 3, 3]} position={[0, 0.2, 0]} />
+                                                </Draggable>
+                                            </div>
+                                            <div className="w-[150px] text-left text-surface-300">
+                                                Try Dragging him around!
+                                            </div>
                                         </div>
                                     </p>
                                 </div>
@@ -227,6 +232,19 @@ function Index(): JSX.Element {
                                 <p>
                                     We’re developing a <a href="https://github.com/team-noon/tactics-sim" className="underline">Tactics Simulation</a> tool to test and refine strategies that will control our robots during real competitions.
                                 </p>
+                                <div className="flex flex-wrap items-center justify-center m-2">
+                                    <img src="/pictures/documentation/tacticsim.png" className="w-[300px]" />
+                                    <div className="text-surface-300 text-center">
+                                        <div className="underline ">Sneak peek of the tactics sim</div>
+                                        <div>
+                                            Red - The Ball 
+                                            <br />
+                                            Shades of Blue - The robots
+                                            <br />
+                                            The lines coming out of them represent their velocity
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="mt-6">
@@ -265,7 +283,7 @@ function Index(): JSX.Element {
 
                 </div>
                 {/* FOOTER */}
-                <div className="border-t border-surface-500 text-surface-500 md:mx-40">
+                <div className="border-t-2 border-surface-500 bg-surface-900/80 backdrop-blur-sm  text-surface-500 pb-15 md:pb-0 md:mx-40">
                     <div className="font-mono text-center p-1">
                         © {new Date().getFullYear()} Team Noon. All rights reserved.
                     </div>

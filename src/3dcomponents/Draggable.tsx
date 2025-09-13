@@ -10,7 +10,7 @@ interface Draggable {
 
 export default function Draggable({ children, clickable }: Draggable): JSX.Element {
     return (
-        <div className="relative w-[200px] h-[200px] max-w-full max-h-screen">
+        <div className="relative w-[200px] h-[200px] max-h-screen">
             {/* Canvas */}
             <Canvas
                 camera={{
