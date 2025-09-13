@@ -21,7 +21,7 @@
         "**/vite.config.ts": true,
         "**/vite-env.d.ts": true,
         "**/CNAME": true,
-        "**/404.html": true,
+        "**/404.html": false,
         "**/favicon.ico": true
     },
     "explorerExclude.backup": {}
