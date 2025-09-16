@@ -1,3 +1,3 @@
-# Humorebot website
+# Noon website
 
-website for the robocup team, humorebot
+website for noon

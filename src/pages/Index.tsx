@@ -117,7 +117,7 @@ function Index(): JSX.Element {
 
         <div className="relative scheme-only-dark">
             <Topbar scrollOffset={offset} appear={150} isMobile={isMobile} />
-            <div className="max-h-screen max-w-screen min-h-screen min-w-screen overflow-y-auto  absolute z-10  top-0" id="content" onScroll={handleScroll}>
+            <div className="max-h-[100dvh] max-w-screen min-h-[100dvh] min-w-screen overflow-y-auto  absolute z-10  top-0" id="content" onScroll={handleScroll}>
                 {/* TITLE SCREEN */}
                 <div className="flex place-content-center items-center relative min-h-screen" id="index">
 
@@ -135,13 +135,13 @@ function Index(): JSX.Element {
                         <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg pb-8">
                             We are a RoboCup team representing Hungary. Our team formed in 2025 and our first competition will be the Humanoid kid size robot soccer competition in the summer of 2026.
                         </div>
-                        <div className="max-w-screen md:w-3xl flex-col [&>*:nth-child(odd)]:justify-self-end ">
+                        <div className="max-w-screen lg:w-5xl grid ">
                             <Member imgSource="pictures/hema-no-bg.png" description="Electrical Design and Embedded Development" name="Nyilas Mátyás" github="https://github.com/Hema2-official" />
                             <Member imgSource="pictures/hema-no-bg.png" description="Web Development, Outreach, and Machine learning" name="Varga Miklós" github="https://github.com/Utelagazkodas" />
                             <Member imgSource="pictures/hema-no-bg.png" description="Electrical Design, Embedded Development and 3D design" name="Virgo Sámuel" github="https://github.com/samthedev32" />
                             <Member imgSource="pictures/hema-no-bg.png" description="Multimedia and Creative Designer" name="Kara Ádám" website="http://adytm.eu/" github="https://github.com/AdyStudios" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Tactics Development and 3D Design" name="Beni" github="https://github.com/vBenii" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Tactics Development and 3D Design" name="Zétény" github="https://github.com/Gaplaster3600" />
+                            <Member imgSource="pictures/hema-no-bg.png" description="Tactics Development and 3D Design" name="Varga Benedek" github="https://github.com/vBenii" />
+                            <Member imgSource="pictures/hema-no-bg.png" description="Tactics Development and 3D Design" name="Fenyvesvölgyi Zétény" github="https://github.com/Gaplaster3600" />
                             <Member imgSource="pictures/hema-no-bg.png" description="Web Development" name="Somfai Máté" github="https://github.com/TheRealMattHUN" />
                         </div>
                     </div>
@@ -166,17 +166,18 @@ function Index(): JSX.Element {
                                 <hr className="mx-20" />
                             </div>
 
-                            We’d be happy to answer your questions — feel free to reach out!”
+                            We’d be happy to answer your questions — feel free to reach out!
                             <br />
                             <br />
-                            We are currently looking for sponsors, in return we will put your logo on our shirt, on our website AND on our robot. Since RoboCup is a huge international competition with a lot of like minded people it's a good opportunity for some publicity! (and we would appreciate it very much {"<3"})
+                            We are currently looking for sponsors, in return we will put your logo on our shirt, on our website AND on our robot. Since RoboCup is a huge international competition with a lot of like minded people it's a good opportunity for some publicity! 
                         </div>
                     </div>
 
                 </div>
+
                 {/* FOOTER */}
-                <div className="border-t border-surface-500 text-surface-500 md:mx-40">
-                    <div className="font-mono text-center p-1">
+                <div className="border-t border-surface-300 text-surface-400 md:mx-40 h-2xl">
+                    <div className="font-mono text-center p-2">
                         © {new Date().getFullYear()} Team Noon. All rights reserved.
                     </div>
                 </div>

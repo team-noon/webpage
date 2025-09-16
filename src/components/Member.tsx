@@ -12,8 +12,8 @@ interface memberCard {
 }
 
 export default function Member({ instagram, github, imgSource, description, name, website }: memberCard): JSX.Element {
-    return (<div className="w-[350px] h-[475px] bg-secondary-950 flex flex-col items-center my-6 rounded-xl p-3 text-center">
-        <div className="text-4xl font-extralight mb-5 mt-2">{name}</div>
+    return (<div className="w-[350px] max-w-screen h-[475px] bg-secondary-950 flex flex-col items-center my-6 rounded-xl p-3 text-center">
+        <div className="text-3xl font-extralight mb-5 mt-2">{name}</div>
         <img src={imgSource} className="aspect-square  object-scale-down border rounded-full size-64 bg-tertiary-200 border-surface-950 " />
 
         <div className="font-light max-w-[80%] mt-4">{description}</div>
