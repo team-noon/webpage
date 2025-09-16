@@ -13,12 +13,14 @@ interface memberCard {
     isZeteny? :boolean
 }
 
-export default function Member({ instagram, github, imgSource, description, name, website, imgClass, isZeteny = false }: memberCard): JSX.Element {
-    
+export default function Member({ instagram, github, imgSource, description, name, website, imgClass }: memberCard): JSX.Element {
     return (<div className="w-[350px] h-[475px] bg-secondary-950 flex flex-col items-center my-6 rounded-xl p-3 text-center">
-        {isZeteny ? <div className="text-2xl font-extralight mb-5 mt-2">{name}</div> : <div className="text-4xl font-extralight mb-5 mt-2">{name}</div>}
-        
-        <img src={imgSource} className={`aspect-square border rounded-full size-64 bg-tertiary-200 border-surface-950 ${imgClass}`} />
+        <div className="text-4xl font-extralight mb-5 mt-2">{name}</div>
+
+        <div className="aspect-square  object-scale-down border rounded-full max-w-60 min-h-60  bg-tertiary-200 border-surface-950 overflow-hidden">
+            <img src={imgSource} className={imgClass} />
+        </div>
+        {/*<img src={imgSource} className="aspect-square  object-scale-down border rounded-full size-64 bg-tertiary-200 border-surface-950 " /> */ }
 
         <div className="font-light max-w-[80%] mt-4">{description}</div>
         {github || instagram || website ? <div className="text-surface-400 flex-1/2 items-center flex">

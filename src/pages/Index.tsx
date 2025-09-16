@@ -153,7 +153,7 @@ function Index(): JSX.Element {
                                 name="Ádám Kara"
                                 website="http://adytm.eu/"
                                 github="https://github.com/AdyStudios"
-                                imgClass="object-bottom object-cover"
+                                imgClass=""
                             />
                             <Member
                                 imgSource="pictures/members/hema-no-bg.png"
@@ -181,10 +181,11 @@ function Index(): JSX.Element {
                                 github="https://github.com/Utelagazkodas"
                             />
                             <Member
-                                imgSource="pictures/members/hema-no-bg.png"
+                                imgSource="pictures/members/sam-no-bg.JPG"
                                 description="Electrical Design, Embedded Development and 3D design"
                                 name="Sámuel Virgo"
                                 github="https://github.com/samthedev32"
+                                imgClass="object-[25%_40%] scale-[200px] object-cover"
                             />
                             <Member
                                 imgSource="pictures/members/hema-no-bg.png"
