@@ -27,8 +27,10 @@ export default function Topbar({ scrollOffset, appear, isMobile }: Topbar): JSX.
 
             <div style={{ backgroundColor: `rgba(${backgroundColor.rgb.red}, ${backgroundColor.rgb.green}, ${backgroundColor.rgb.blue}, ${Math.min(0.5, scrollOffset / appear)})`, borderColor: `rgba(${borderColor.rgb.red}, ${borderColor.rgb.green}, ${borderColor.rgb.blue}, ${Math.min(1, scrollOffset / appear)})` }} className="h-12 text-secondary-200 absolute w-screen  flex place-content-center items-center z-20 backdrop-blur-xl border-b-2 *:text-center ">
 
-                <a href="/#" className="w-25 border-r-2 flex place-content-center" id="topbar">
-                    <SVG svgType={svgs.monoLogo} id="indexButton" size={25} />
+                <a href="/#" className="w-25 h-8 overflow-visible border-r-2 flex place-content-center static" id="topbar">
+                    <div className="absolute -top-3">
+                    <SVG svgType={svgs.monoLogo} id="indexButton" size={70} />
+                    </div>
                 </a>
                 <div className="flex-1/2">
                     <a href="/#about" id="topbar">
@@ -47,7 +49,7 @@ export default function Topbar({ scrollOffset, appear, isMobile }: Topbar): JSX.
                     </a>
                 </div>
 
-                <a href="https://github.com/hu-more-bot" className="border-l-2 w-25 flex place-content-center">
+                <a href="https://github.com/team-noon" className="border-l-2 w-25 flex place-content-center">
                     <FiGithub size={"25px"} />
                 </a>
 
@@ -64,15 +66,12 @@ export default function Topbar({ scrollOffset, appear, isMobile }: Topbar): JSX.
     const closeDrawer = () => { setDrawerOpen(false) }
     return (<div>
 
-        <div style={{ backgroundColor: `rgba(${backgroundColor.rgb.red}, ${backgroundColor.rgb.green}, ${backgroundColor.rgb.blue}, ${Math.min(0.5, scrollOffset / appear)})`, borderColor: `rgba(${borderColor.rgb.red}, ${borderColor.rgb.green}, ${borderColor.rgb.blue}, ${Math.min(1, scrollOffset / appear)})` }} className="h-12 text-secondary-200 absolute w-screen *:flex-1/2 flex place-content-center items-center z-20 backdrop-blur-xl border-b-2 text-lg">
+        <div style={{ backgroundColor: `rgba(${backgroundColor.rgb.red}, ${backgroundColor.rgb.green}, ${backgroundColor.rgb.blue}, ${Math.min(0.5, scrollOffset / appear)})`, borderColor: `rgba(${borderColor.rgb.red}, ${borderColor.rgb.green}, ${borderColor.rgb.blue}, ${Math.min(1, scrollOffset / appear)})` }} className="h-12 text-secondary-200 absolute w-screen  flex place-content-center items-center z-20 backdrop-blur-xl border-b-2 text-lg">
             <button className="ml-5" onClick={openDrawer}>
                 <MdMenu color={colors.secondary200.hex} size={"25px"} />
             </button>
-            <div className="text-center font-mono font-stretch-50% font-light min-w-[120px]" >
-                no-on
-            </div>
-            <a className="flex-1/2" href="/#" id="topbar">
-                <SVG svgType={svgs.monoLogo} id="indexButton" size={25} />
+            <a className="flex-11/12 flex items-center justify-center" href="/#" id="topbar">
+                <SVG svgType={svgs.monoLogo} id="indexButton" size={75} />
 
             </a>
 

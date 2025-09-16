@@ -1,17 +1,16 @@
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
-import { CarModel } from "./Low-poly-f1-car";
+import { RobotModel } from "./Mockup assembly";
 
 export default function Object():JSX.Element{
           const objectRef = useRef<THREE.Group>(null); // Move ref above useFrame
         
           useFrame(() => {
             if (objectRef.current) {
-
-              objectRef.current.rotation.y += 0.01;
+              objectRef.current.rotation.z += 0.01;
             }
           });
     return (<>
-        <CarModel ref={objectRef} castShadow  position={[0, -2, -7.5]} rotation={[0,0,0]} scale={[0.5,0.5,0.5]}/>
+        <RobotModel ref={objectRef} position={[0,  0, -7.5]} rotation={[Math.PI/2,Math.PI,Math.PI]} scale={[5,5,5]}/>
     </>)
 }

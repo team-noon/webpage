@@ -40,11 +40,10 @@ export default function TitleComp() {
                 className="
       md:text-9xl text-5xl font-mono select-none inline-block leading-[1.1]
       bg-gradient-to-r from-primary-300 to-primary-700
-      text-transparent bg-clip-text font-stretch-50%
+      text-transparent bg-clip-text
       [background-clip:text] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]
     "
             >
-
                 {curStep - timeDelay < text.length
                     ? (<>{text.substring(0, curStep - timeDelay)}</>)
                     : End}

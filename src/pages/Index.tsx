@@ -4,6 +4,8 @@ import ScrollDown from "../components/ScrollDown";
 import colors from "../colors";
 import TitleComp from "../components/Title/TitleComp";
 import Member from "../components/Member";
+import Draggable from "../3dcomponents/Draggable";
+import { RobotModel } from "../3dcomponents/Mockup assembly";
 
 const Experience = lazy(() => import('../components/Experience'))
 const Background = lazy(() => import("../3dcomponents/Background"))
@@ -126,36 +128,142 @@ function Index(): JSX.Element {
                     <ScrollDown scrollOffset={offset} disappear={100} color={colors.primary500} />
                 </div>
                 {/* the actual content */}
-                <div className="*:border-t *:border-surface-900  *:text-primary-100 *:text-justify *:pt-12 *:items-center *:flex *:flex-col *:rounded-t-3xl *:min-h-screen">
+                <div className=" *:border-surface-900 *:border-y-2 *:text-primary-100 *:text-justify *:pt-12 *:items-center *:flex *:flex-col  *:min-h-screen">
                     {/* ABOUT US SECTION */}
-                    <div className="bg-surface-700/60 translate-y-5 backdrop-blur-xl" id="about">
+                    <div className="bg-surface-700/60 border-t rounded-t-2xl backdrop-blur-sm pb-10" id="about">
                         <div className="font-mono underline underline-offset-2 text-4xl my-8">
                             About Us
                         </div>
                         <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg pb-8">
                             We are a RoboCup team representing Hungary. Our team formed in 2025 and our first competition will be the Humanoid kid size robot soccer competition in the summer of 2026.
+                            <br /> <br />
+                            We believe in open source software (and hardware) so you can access anything we do on <a href="https://github.com/team-noon" className="underline">our Github page</a>!
+                            <br /> <br />
+                            We look ahead to working on our robot from year to year making improvements and learning along the way.
                         </div>
-                        <div className="max-w-screen lg:w-5xl grid ">
-                            <Member imgSource="pictures/hema-no-bg.png" description="Electrical Design and Embedded Development" name="Nyilas Mátyás" github="https://github.com/Hema2-official" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Web Development, Outreach, and Machine learning" name="Varga Miklós" github="https://github.com/Utelagazkodas" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Electrical Design, Embedded Development and 3D design" name="Virgo Sámuel" github="https://github.com/samthedev32" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Multimedia and Creative Designer" name="Kara Ádám" website="http://adytm.eu/" github="https://github.com/AdyStudios" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Tactics Development and 3D Design" name="Varga Benedek" github="https://github.com/vBenii" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Tactics Development and 3D Design" name="Fenyvesvölgyi Zétény" github="https://github.com/Gaplaster3600" />
-                            <Member imgSource="pictures/hema-no-bg.png" description="Web Development" name="Somfai Máté" github="https://github.com/TheRealMattHUN" />
+                        <div className="text-4xl font-mono ">
+                            Our members
+                        </div>
+                        <hr className="md:w-[600px] w-screen mb-10" />
+                        <div className="max-w-screen md:w-3xl flex *:m-3 flex-wrap place-content-around">
+                            <Member
+
+                                imgSource="pictures/members/kara-no-bg.png"
+                                description="Multimedia and Creative Designer"
+                                name="Ádám Kara"
+                                website="http://adytm.eu/"
+                                github="https://github.com/AdyStudios"
+                                imgClass="object-bottom object-cover"
+                            />
+                            <Member
+                                imgSource="pictures/members/hema-no-bg.png"
+                                description="Tactics Development and 3D Design"
+                                name="Benedek Varga"
+                                github="https://github.com/vBenii"
+                            />
+                            <Member
+                                imgSource="pictures/members/hema-no-bg.png"
+                                description="Electrical Design and Embedded Development"
+                                name="Mátyás Nyilas"
+                                github="https://github.com/Hema2-official"
+                                imgClass="object-centers object-cover"
+                            />
+                            <Member
+                                imgSource="pictures/members/hema-no-bg.png"
+                                description="Web Development and Tactics Simulation"
+                                name="Máté Somfai"
+                                github="https://github.com/TheRealMattHUN"
+                            />
+                            <Member
+                                imgSource="pictures/members/hema-no-bg.png"
+                                description="Web Development, Outreach, and Machine learning"
+                                name="Miklós Varga"
+                                github="https://github.com/Utelagazkodas"
+                            />
+                            <Member
+                                imgSource="pictures/members/hema-no-bg.png"
+                                description="Electrical Design, Embedded Development and 3D design"
+                                name="Sámuel Virgo"
+                                github="https://github.com/samthedev32"
+                            />
+                            <Member
+                                imgSource="pictures/members/hema-no-bg.png"
+                                description="Tactics Development and 3D Design"
+                                name="Zétény Fenyvesvölgyi"
+                                github="https://github.com/Gaplaster3600"
+                                isZeteny={true}
+                            />
                         </div>
                     </div>
-                    {/* OUR PREVIOUS COMPETITIONS - HISTORY */}
-                    <div className="  translate-y-5" id="docs">
+                    {/* The yapp about our robot */}
+                    <div className="border-y bg-surface-800/60 backdrop-blur-sm" id="docs">
                         <div className="font-mono underline underline-offset-2 text-4xl my-8">
-                            A bit about our robot
+                            A Bit About Our Robot
                         </div>
-                        <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg ">
+
+                        <div className="max-w-screen md:w-4xl p-4 text-sm md:text-lg text-pink-50 font-normal">
+
+                            <div>
+                                <div className="font-semibold text-center">Hardware</div>
+                                <div className="mt-2">
+                                    <div className="font-medium">Electronics</div>
+                                    <p>
+                                        We’re designing custom PCBs that will be mounted in both the head and body of the robot. For now, we’re prototyping on a development board to work out the quirks of the CPU, motors, and drivers.
+                                    </p>
+                                    <div className="font-medium mt-3">Body</div>
+                                    <p>
+                                        The robot’s frame will use carbon fiber rods combined with custom 3D-printed parts (both FDM and SLA). The render you see in the website background (and below) is a mockup with roughly correct proportions, created primarily for balancing tests.
+                                        <div className="flex items-center justify-center">
+                                            <div className="bg-surface-950 border rounded-lg  w-[200px]  m-5">
+                                                <Draggable>
+                                                    <RobotModel rotation={[Math.PI / -3, 0, 0]} scale={[3, 3, 3]} position={[0, 0.2, 0]} />
+                                                </Draggable>
+                                            </div>
+                                            <div className="w-[150px] text-left text-surface-300">
+                                                Try Dragging him around!
+                                            </div>
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="mt-6">
+                                <div className="font-semibold text-center">Tactics</div>
+                                <p>
+                                    We’re developing a <a href="https://github.com/team-noon/tactics-sim" className="underline">Tactics Simulation</a> tool to test and refine strategies that will control our robots during real competitions.
+                                </p>
+                                <div className="flex flex-wrap items-center justify-center m-2">
+                                    <img src="/pictures/documentation/tacticsim.png" className="w-[300px]" />
+                                    <div className="text-surface-300 text-center">
+                                        <div className="underline ">Sneak peek of the tactics sim</div>
+                                        <div>
+                                            Red - The Ball 
+                                            <br />
+                                            Shades of Blue - The robots
+                                            <br />
+                                            The lines coming out of them represent their velocity
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-6">
+                                <div className="font-semibold text-center">Balancing</div>
+                                <p>
+                                    To train our robot to walk and stay balanced—even under external forces—we’re building a custom Unity environment. This setup allows us to train a neural network for robust balance control.
+                                    Explore the <a href="https://github.com/team-noon/balancing-sim" className="underline">source code here</a>.
+                                </p>
+                            </div>
+
+                            <div className="my-8 text-center text-xl">
+                                <a href="https://docs.no-on.hu" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop">Read more on our docs page</a>
+                            </div>
 
                         </div>
                     </div>
-                    {/* FOR SPONSORS SECTION */}
-                    <div className="bg-surface-900/80 backdrop-blur-xl" id="contact">
+
+                    {/* Contacts  */}
+                    <div className="bg-surface-900/80 backdrop-blur-sm border-t" id="contact">
                         <div className="font-mono underline underline-offset-2 md:text-5xl text-4xl my-8">
                             Contact
                         </div>
@@ -169,15 +277,15 @@ function Index(): JSX.Element {
                             We’d be happy to answer your questions — feel free to reach out!
                             <br />
                             <br />
-                            We are currently looking for sponsors, in return we will put your logo on our shirt, on our website AND on our robot. Since RoboCup is a huge international competition with a lot of like minded people it's a good opportunity for some publicity! 
+                            We are currently looking for sponsors, in return we will put your logo on our shirt, on our website AND on our robot. Since RoboCup is a huge international competition with a lot of like minded people it's a good opportunity for some publicity!
                         </div>
                     </div>
 
                 </div>
 
                 {/* FOOTER */}
-                <div className="border-t border-surface-300 text-surface-400 md:mx-40 h-2xl">
-                    <div className="font-mono text-center p-2">
+                <div className="border-t-2 border-surface-500 bg-surface-900/80 backdrop-blur-sm  text-surface-500 pb-15 md:pb-0 md:mx-40">
+                    <div className="font-mono text-center p-1">
                         © {new Date().getFullYear()} Team Noon. All rights reserved.
                     </div>
                 </div>

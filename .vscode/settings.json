@@ -9,7 +9,7 @@
         "**/node_modules": true,
         "**/.eslintrc.cjs": true,
         "**/package-lock.json": true,
-        "**/package.json": true,
+        "**/package.json": false,
         "**/README.md": true,
         "**/.gitignore": true,
         "**/tsconfig.json": true,
@@ -21,7 +21,7 @@
         "**/vite.config.ts": true,
         "**/vite-env.d.ts": true,
         "**/CNAME": true,
-        "**/404.html": true,
+        "**/404.html": false,
         "**/favicon.ico": true
     },
     "explorerExclude.backup": {}
