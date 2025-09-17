@@ -11,6 +11,6 @@ export default function Object():JSX.Element{
             }
           });
     return (<>
-        <RobotModel ref={objectRef} position={[0,  0, -7.5]} rotation={[Math.PI/2,Math.PI,Math.PI]} scale={[5,5,5]}/>
+        <RobotModel ref={objectRef} position={[0,  0, -7.5]} rotation={[Math.PI/2,Math.PI,Math.PI]} scale={[4.5,4.5,4.5]}/>
     </>)
 }

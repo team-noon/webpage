@@ -131,7 +131,7 @@ function Index(): JSX.Element {
                 <div className=" *:border-surface-900 *:border-y-2 *:text-primary-100 *:text-justify *:pt-12 *:items-center *:flex *:flex-col  *:min-h-screen">
                     {/* ABOUT US SECTION */}
                     <div className="bg-surface-700/60 border-t rounded-t-2xl backdrop-blur-sm pb-10" id="about">
-                        <div className="font-mono underline underline-offset-2 text-4xl my-8">
+                        <div className="font-mono text-4xl my-8">
                             About Us
                         </div>
                         <div className="max-w-screen  md:w-4xl p-4 text-sm md:text-lg pb-8">
@@ -195,20 +195,20 @@ function Index(): JSX.Element {
                     </div>
                     {/* The yapp about our robot */}
                     <div className="border-y bg-surface-800/60 backdrop-blur-sm" id="docs">
-                        <div className="font-mono underline underline-offset-2 text-4xl my-8">
+                        <div className="font-mono  text-4xl my-8 text-center">
                             A Bit About Our Robot
                         </div>
 
                         <div className="max-w-screen md:w-4xl p-4 text-sm md:text-lg text-pink-50 font-normal">
 
                             <div>
-                                <div className="font-semibold text-center">Hardware</div>
+                                <div className="font-semibold text-2xl text-center">Hardware</div>
                                 <div className="mt-2">
-                                    <div className="font-medium">Electronics</div>
+                                    <div className="font-medium text-lg">Electronics</div>
                                     <p>
                                         We’re designing custom PCBs that will be mounted in both the head and body of the robot. For now, we’re prototyping on a development board to work out the quirks of the CPU, motors, and drivers.
                                     </p>
-                                    <div className="font-medium mt-3">Body</div>
+                                    <div className="font-medium mt-3 text-lg">Body</div>
                                     <p>
                                         The robot’s frame will use carbon fiber rods combined with custom 3D-printed parts (both FDM and SLA). The render you see in the website background (and below) is a mockup with roughly correct proportions, created primarily for balancing tests.
                                         <div className="flex items-center justify-center">
@@ -226,13 +226,13 @@ function Index(): JSX.Element {
                             </div>
 
                             <div className="mt-6">
-                                <div className="font-semibold text-center">Tactics</div>
+                                <div className="font-semibold text-2xl text-center mb-2">Tactics</div>
                                 <p>
                                     We’re developing a <a href="https://github.com/team-noon/tactics-sim" className="underline">Tactics Simulation</a> tool to test and refine strategies that will control our robots during real competitions.
                                 </p>
                                 <div className="flex flex-wrap items-center justify-center m-2">
-                                    <img src="/pictures/documentation/tacticsim.png" className="w-[300px]" />
-                                    <div className="text-surface-300 text-center">
+                                    <img src="/pictures/documentation/tacticsim.png" className="w-[300px] rounded-2xl" />
+                                    <div className="text-surface-300 text-center md:text-left md:p-2">
                                         <div className="underline ">Sneak peek of the tactics sim</div>
                                         <div>
                                             Red - The Ball 
@@ -246,13 +246,21 @@ function Index(): JSX.Element {
                             </div>
 
                             <div className="mt-6">
-                                <div className="font-semibold text-center">Balancing</div>
+                                <div className="font-semibold text-2xl text-center mb-2">Balancing</div>
                                 <p>
                                     To train our robot to walk and stay balanced—even under external forces—we’re building a custom Unity environment. This setup allows us to train a neural network for robust balance control.
                                     Explore the <a href="https://github.com/team-noon/balancing-sim" className="underline">source code here</a>.
+
+                                    <div className="flex justify-center mt-4">
+                                        <div className="aspect-video w-[450px] max-w-screen  flex items-center justify-center rounded-xl bg-gradient-to-tl from-surface-700 to-surface-950 border border-surface-950">
+                                            * Video coming soon *
+                                        </div>
+                                    </div>
+
                                 </p>
                             </div>
 
+                            <hr className="mt-8 border-surface-300 md:mx-8" />
                             <div className="my-8 text-center text-xl">
                                 <a href="https://docs.no-on.hu" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop">Read more on our docs page</a>
                             </div>
@@ -262,7 +270,7 @@ function Index(): JSX.Element {
 
                     {/* Contacts  */}
                     <div className="bg-surface-900/80 backdrop-blur-sm border-t" id="contact">
-                        <div className="font-mono underline underline-offset-2 md:text-5xl text-4xl my-8">
+                        <div className="font-mono  md:text-5xl text-4xl my-8">
                             Contact
                         </div>
                         <div className="max-w-screen  md:w-4xl p-4 text-base text-justify md:text-center md:text-lg ">
@@ -282,7 +290,7 @@ function Index(): JSX.Element {
                 </div>
 
                 {/* FOOTER */}
-                <div className="border-t-2 border-surface-500 bg-surface-900/80 backdrop-blur-sm  text-surface-500 pb-15 md:pb-0 md:mx-40">
+                <div className="border-t-2 border-surface-500 bg-surface-900/80 backdrop-blur-sm  text-surface-500 pb-10 md:pb-0 md:mx-40">
                     <div className="font-mono text-center p-1">
                         © {new Date().getFullYear()} Team Noon. All rights reserved.
                     </div>

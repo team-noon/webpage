@@ -5,7 +5,7 @@ Files: ./public/3dFiles/Mockup assembly.gltf [721.36KB] > /home/utelagazkodas/co
 */
 
 import * as THREE from 'three'
-import  { forwardRef } from 'react'
+import { forwardRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import colors from '../colors'
@@ -19,15 +19,28 @@ type GLTFResult = GLTF & {
   }
 }
 
-export const RobotModel = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>((props, ref) => {
-  const { nodes, materials } = useGLTF('/3dFiles/Mockup assembly-transformed.glb') as GLTFResult
+export const RobotModel = forwardRef<THREE.Group, JSX.IntrinsicElements['group']>(
+  (props, ref) => {
+    const { nodes } = useGLTF('/3dFiles/Mockup assembly-transformed.glb') as GLTFResult
 
-  materials.PaletteMaterial001.color=new THREE.Color(colors.secondary200.hex)
-  return (
-    <group ref={ref} {...props} dispose={null}>
-      <mesh geometry={nodes.LeftUpperLeg.geometry} material={materials.PaletteMaterial001} position={[-0.073, -0.016, -0.197]} rotation={[-0.368, -1.436, -0.394]} />
-    </group>
-  )
-})
+    // Create a fresh material that ignores GLTF textures
+    const flatMaterial = new THREE.MeshStandardMaterial({
+      color: new THREE.Color(colors.secondary100.hex),
+      metalness: 0.5,
+      roughness: 0.5,
+    })
+
+    return (
+      <group ref={ref} {...props} dispose={null}>
+        <mesh
+          geometry={nodes.LeftUpperLeg.geometry}
+          material={flatMaterial}
+          position={[-0.073, -0.016, -0.197]}
+          rotation={[-0.368, -1.436, -0.394]}
+        />
+      </group>
+    )
+  }
+)
 
 useGLTF.preload('/3dFiles/Mockup assembly-transformed.glb')
