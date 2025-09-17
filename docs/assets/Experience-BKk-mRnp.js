@@ -1,1 +1,0 @@
-import{j as s}from"./index-Cfs1MwZi.js";import{C as i}from"./Index-akWKoAAs.js";function m({className:a,offset:t,children:r,width:o,height:e}){return s.jsx(i,{camera:{position:[0,2,0],rotation:[Math.PI/-8,0,0],fov:75},style:{width:o,height:e,maxWidth:"100vw",maxHeight:"100vh",translate:`0px ${(t||0)/-5}px`},className:a,shadows:!0,children:r})}export{m as default};
