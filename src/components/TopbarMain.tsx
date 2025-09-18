@@ -27,7 +27,7 @@ export default function Topbar({ scrollOffset, appear, isMobile }: Topbar): JSX.
 
             <div style={{ backgroundColor: `rgba(${backgroundColor.rgb.red}, ${backgroundColor.rgb.green}, ${backgroundColor.rgb.blue}, ${Math.min(0.5, scrollOffset / appear)})`, borderColor: `rgba(${borderColor.rgb.red}, ${borderColor.rgb.green}, ${borderColor.rgb.blue}, ${Math.min(1, scrollOffset / appear)})` }} className="h-12 text-secondary-200 absolute w-screen  flex place-content-center items-center z-20 backdrop-blur-xl border-b-2 *:text-center ">
 
-                <a href="/#" className="w-25 h-8 overflow-visible items-center flex place-content-center static " id="topbar">
+                <a href="/#" className="w-25 h-8 overflow-visible items-center flex place-content-center static ml-2" id="topbar">
 
                     <SVG svgType={svgs.monoLogo} id="indexButton" size={80} />
 

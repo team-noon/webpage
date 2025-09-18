@@ -154,12 +154,12 @@ function Index(): JSX.Element {
                                 website="http://adytm.eu/"
                                 github="https://github.com/AdyStudios"
                             />
-                            <Member
+                            {/*<Member
                                 imgSource="pictures/members/old/hema-no-bg.png"
                                 description="Tactics Development and 3D Design"
                                 name="Benedek Varga"
                                 github="https://github.com/vBenii"
-                            />
+                            /> */}
                             <Member
                                 imgSource="pictures/members/hema-crop.png"
                                 description="Electrical Design and Embedded Development"
