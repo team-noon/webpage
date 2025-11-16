@@ -153,6 +153,7 @@ function Index(): JSX.Element {
                                 name="Ádám Kara"
                                 website="http://adytm.eu/"
                                 github="https://github.com/AdyStudios"
+                                school="Óbuda University"
                             />
                             {/*<Member
                                 imgSource="pictures/members/old/hema-no-bg.png"
@@ -165,24 +166,28 @@ function Index(): JSX.Element {
                                 description="Electrical Design and Embedded Development"
                                 name="Mátyás Nyilas"
                                 github="https://github.com/Hema2-official"
+                                school="Delft University of Technology"
                             />
                             <Member
                                 imgSource="pictures/members/somfa-crop.png"
                                 description="Web Development and Tactics Simulation"
                                 name="Máté Somfai"
                                 github="https://github.com/TheRealMattHUN"
+                                school="Lovassy László Gymnasium"
                             />
                             <Member
                                 imgSource="pictures/members/miki-crop.png"
                                 description="Web Development, Outreach, and Machine learning"
                                 name="Miklós Varga"
                                 github="https://github.com/Utelagazkodas"
+                                school="Lovassy László Gymnasium"
                             />
                             <Member
                                 imgSource="pictures/members/samu-crop.png"
                                 description="Electrical Design, Embedded Development and 3D design"
                                 name="Sámuel Virgo"
                                 github="https://github.com/samthedev32"
+                                school="Lovassy László Gymnasium"
                             />
                             <Member
                                 imgSource="pictures/members/zeti-crop.png"
@@ -190,6 +195,7 @@ function Index(): JSX.Element {
                                 name="Zétény Fenyvesvölgyi"
                                 github="https://github.com/Gaplaster3600"
                                 isZeteny={true}
+                                school="Krúdy Gyula Gymnasium"
                             />
                         </div>
                     </div>
@@ -248,7 +254,7 @@ function Index(): JSX.Element {
                             <div className="mt-6">
                                 <div className="font-semibold text-2xl text-center mb-2">Balancing</div>
                                 <p>
-                                    To train our robot to walk and stay balanced—even under external forces—we’re building a custom Unity environment. This setup allows us to train a neural network for robust balance control.
+                                    To train our robot to walk and stay balanced—even under external forces—we’re building a custom Webots environment. This setup allows us to train a neural network for robust balance control.
                                     Explore the <a href="https://github.com/team-noon/balancing-sim" className="underline">source code here</a>.
 
                                     <div className="flex justify-center mt-4">
@@ -283,7 +289,7 @@ function Index(): JSX.Element {
                             We’d be happy to answer your questions — feel free to reach out!
                             <br />
                             <br />
-                            We are currently looking for sponsors, in return we will put your logo on our shirt, on our website AND on our robot. Since RoboCup is a huge international competition with a lot of like minded people it's a good opportunity for some publicity!
+                            We are currently looking for sponsors, in return we will put your logo on our shirt and on our website. Since RoboCup is a huge international competition with a lot of like minded people it's a good opportunity for some publicity!
                         </div>
                     </div>
 
