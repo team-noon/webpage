@@ -257,10 +257,12 @@ function Index(): JSX.Element {
                                     To train our robot to walk and stay balanced—even under external forces—we’re building a custom Webots environment. This setup allows us to train a neural network for robust balance control.
                                     Explore the <a href="https://github.com/team-noon/balancing-sim" className="underline">source code here</a>.
 
-                                    <div className="flex justify-center mt-4">
-                                        <div className="aspect-video w-[450px] max-w-screen  flex items-center justify-center rounded-xl bg-gradient-to-tl from-surface-700 to-surface-950 border border-surface-950">
+                                    <div className="flex justify-center flex-wrap items-center mt-4">
+                                        {/*<div className="aspect-video w-[450px] max-w-screen  flex items-center justify-center rounded-xl bg-gradient-to-tl from-surface-700 to-surface-950 border border-surface-950">
                                             * Video coming soon *
-                                        </div>
+                                        </div>*/}
+                                        <img className="h-64 rounded-xl border-2 border-surface-900" src="./gifs/robot-balancing.gif" />
+                                        <div className="w-60 text-left mx-3 mt-3 text-surface-300">Early prototype of the robot balancing in Unity</div>
                                     </div>
 
                                 </p>
@@ -268,7 +270,7 @@ function Index(): JSX.Element {
 
                             <hr className="mt-8 border-surface-300 md:mx-8" />
                             <div className="my-8 text-center text-xl">
-                                <a href="https://docs.no-on.hu" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop">Read more on our docs page</a>
+                                <a href="https://github.com/team-noon/.github/wiki/" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop">Read more on our Github Wiki</a>
                             </div>
 
                         </div>
@@ -281,7 +283,10 @@ function Index(): JSX.Element {
                         </div>
                         <div className="max-w-screen  md:w-4xl p-4 text-base text-justify md:text-center md:text-lg ">
                             <div className="md:text-2xl text-xl pb-3 ">
-                                You can contact us at: <a href="mailto:team@no-on.hu" className="text-primary-400">team@no-on.hu</a>
+                                You can contact us at: 
+                                <br /><a href="mailto:team@no-on.hu" className="text-primary-400">team@no-on.hu</a>  <br />
+                                or <br />
+                                <a href="mailto:robocup.noon@gmail.com" className="text-primary-400">mailto:robocup.noon@gmail.com</a>
 
                                 <hr className="mx-20" />
                             </div>

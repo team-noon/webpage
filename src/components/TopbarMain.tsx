@@ -4,6 +4,7 @@ import colors from "../colors"
 import { FiGithub } from "react-icons/fi";
 import { MdMenu } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
+import { FiYoutube } from "react-icons/fi";
 
 import Drawer from 'react-modern-drawer'
 import SVG, { svgs } from "./Svg";
@@ -49,9 +50,11 @@ export default function Topbar({ scrollOffset, appear, isMobile }: Topbar): JSX.
                     </a>
                 </div>
 
-                <a href="https://github.com/team-noon" className="border-l-2 w-25 flex place-content-center">
-                    <FiGithub size={"25px"} />
-                </a>
+                <div className="border-l-2 w-25 flex place-content-center *:mx-2 px-2">
+                    <a href="https://www.youtube.com/@team-noon"><FiYoutube size={"25px"} /></a>
+                    <a href="https://github.com/team-noon"><FiGithub size={"25px"} /></a>
+
+                </div>
 
 
 
@@ -107,7 +110,10 @@ export default function Topbar({ scrollOffset, appear, isMobile }: Topbar): JSX.
                     </div>
 
                 </div>
-                <div className="flex   place-content-center border-t-2  items-center pb-16 pt-8 mx-10 ">
+                <div className="flex flex-col  place-content-center border-t-2  items-center pb-16 pt-4 mx-10 *:mt-2">
+                    <a href="https://www.youtube.com/@team-noon" className="flex text-xl border-b px-3 pb-1">Youtube <FiYoutube className="ml-4" size={"25px"} />
+                    </a>
+                    
                     <a href="https://github.com/team-noon" className="flex text-xl">
 
                         Github <FiGithub size={"25px"} className="ml-4" />
