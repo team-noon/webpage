@@ -286,7 +286,7 @@ function Index(): JSX.Element {
                                 You can contact us at: 
                                 <br /><a href="mailto:team@no-on.hu" className="text-primary-400">team@no-on.hu</a>  <br />
                                 or <br />
-                                <a href="mailto:robocup.noon@gmail.com" className="text-primary-400">mailto:robocup.noon@gmail.com</a>
+                                <a href="mailto:robocup.noon@gmail.com" className="text-primary-400">robocup.noon@gmail.com</a>
 
                                 <hr className="mx-20" />
                             </div>
