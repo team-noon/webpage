@@ -166,7 +166,7 @@ function Index(): JSX.Element {
                                 description="Electrical Design and Embedded Development"
                                 name="Mátyás Nyilas"
                                 github="https://github.com/Hema2-official"
-                                school="Delft University of Technology"
+                                school="University of Twente"
                             />
                             <Member
                                 imgSource="pictures/members/somfa-crop.png"
