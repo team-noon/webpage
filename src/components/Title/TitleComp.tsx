@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react"
 import "./TitleComp.css"
 
-const text = "www.no-on.hu"
+const text = "team no-on"
 
 const End: JSX.Element = (<>
-    <span id="titleSubDomain">www.</span>
-    <span id="titleFirstHalf">no</span>
-    <span id="titleDash">-</span>
-    <span id="titleSecondHalf">on</span>
-    <span id="titleTopDomain">.hu</span>
+    team no-on
 </>)
 
 const timeDelay: number = 5 // number of cycles before it actually starts typing it
@@ -38,7 +34,7 @@ export default function TitleComp() {
             <span
                 id="titleText"
                 className="
-      md:text-9xl text-5xl font-mono select-none inline-block leading-[1.1]
+      md:text-8xl text-5xl font-mono select-none inline-block leading-[1.1]
       bg-gradient-to-r from-primary-300 to-primary-700
       text-transparent bg-clip-text
       [background-clip:text] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]

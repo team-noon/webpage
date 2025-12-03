@@ -6,6 +6,7 @@ import TitleComp from "../components/Title/TitleComp";
 import Member from "../components/Member";
 import Draggable from "../3dcomponents/Draggable";
 import { RobotModel } from "../3dcomponents/Mockup assembly";
+import SponsorButton from "../components/SponsorButton";
 
 const Experience = lazy(() => import('../components/Experience'))
 const Background = lazy(() => import("../3dcomponents/Background"))
@@ -124,6 +125,17 @@ function Index(): JSX.Element {
                 <div className="flex place-content-center items-center relative min-h-screen" id="index">
 
                     <TitleComp />
+                    <SponsorButton href="https://www.unitree.hu/" className="left-3 top-4/12 md:left-12" size={isMobile ? 32 : 64}>
+                        <img src="/pictures/logos/infuze.png"/>
+                    </SponsorButton>
+
+                    <SponsorButton href="https://www.maxongroup.com/" size={isMobile ? 32 : 64} className="right-3 md:right-12 top-4/12">
+                        <img src="/pictures/logos/maxon.png" />
+                    </SponsorButton>
+
+                    {/*<SponsorButton href="https://www.maxongroup.com/" size={isMobile ? 32 : 64} className="left-3 md:left-12 top-[45%] md:top-[70%]">
+                        <img src="/pictures/logos/hestore.png" />
+                    </SponsorButton> */}
 
                     <ScrollDown scrollOffset={offset} disappear={100} color={colors.primary500} />
                 </div>
