@@ -30,7 +30,7 @@ export default function TitleComp() {
 
     return (
 
-        <div className="flex items-center -translate-y-48 z-10">
+        <div className="flex items-center -translate-y-[30vh] z-10">
             <span
                 id="titleText"
                 className="

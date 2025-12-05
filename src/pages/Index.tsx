@@ -125,11 +125,11 @@ function Index(): JSX.Element {
                 <div className="flex place-content-center items-center relative min-h-screen" id="index">
 
                     <TitleComp />
-                    <SponsorButton href="https://www.unitree.hu/" className="left-3 top-4/12 md:left-12" size={isMobile ? 32 : 64}>
+                    <SponsorButton href="https://www.unitree.hu/" className="left-3 top-4/12 md:left-12" size={isMobile ? "128px" : "20vw"}>
                         <img src="/pictures/logos/infuze.png"/>
                     </SponsorButton>
 
-                    <SponsorButton href="https://www.maxongroup.com/" size={isMobile ? 32 : 64} className="right-3 md:right-12 top-4/12">
+                    <SponsorButton href="https://www.maxongroup.com/" size={isMobile ? "128px" : "20vw"} className="right-3 md:right-12 top-4/12">
                         <img src="/pictures/logos/maxon.png" />
                     </SponsorButton>
 
@@ -282,7 +282,7 @@ function Index(): JSX.Element {
 
                             <hr className="mt-8 border-surface-300 md:mx-8" />
                             <div className="my-8 text-center text-xl">
-                                <a href="https://github.com/team-noon/.github/wiki/" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop">Read more on our Github Wiki</a>
+                                <a href="https://docs.google.com/document/d/1YPM1EzlZLIFmAyXTJZOxc3lrpaGzJnXO86ZKA5H6EsU/edit?usp=sharing" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop">Read more about us!</a>
                             </div>
 
                         </div>
@@ -306,7 +306,7 @@ function Index(): JSX.Element {
                             We’d be happy to answer your questions — feel free to reach out!
                             <br />
                             <br />
-                            We are currently looking for sponsors, in return we will put your logo on our shirt and on our website. Since RoboCup is a huge international competition with a lot of like minded people it's a good opportunity for some publicity!
+                            We are currently looking for sponsors, in return we will put your logo on our shirt, on our website and in every piece of media we make. Since RoboCup is a huge international competition with a lot of like minded people it's a good opportunity for some publicity!
                         </div>
                     </div>
 

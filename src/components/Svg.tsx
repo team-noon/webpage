@@ -1,6 +1,6 @@
 
 export enum svgs{
-    monoLogo = "/pictures/logos/noonLogoLight.svg",
+    monoLogo = "/pictures/logos/noonLogoLight.webp",
     Logo = "/pictures/logos/noonLogoDark.svg"
 }
 
