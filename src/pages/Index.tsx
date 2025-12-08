@@ -71,10 +71,9 @@ function Index(): JSX.Element {
             }
 
             lastHash = hash;
-
-
             if (element) {
                 history.pushState(null, "", `#${hash}`); // Update URL without triggering default jump
+                
                 element.scrollIntoView({ behavior: "smooth", block: "start" });
 
             }
@@ -91,14 +90,19 @@ function Index(): JSX.Element {
         const interceptAnchorClicks = (event: MouseEvent) => {
             const target = event.target as HTMLAnchorElement;
 
-            if (target.tagName === "A" && (target.hash || target.hash == "") && target.id == "topbar") {
+            if (target.tagName === "A" && (target.hash || target.hash == "") && (target.id == "topbar" || target.id=="scrollDown")) {
                 event.preventDefault(); // Stop default hash jump
                 handleHashChange(target.hash.substring(1), true); // Manually smooth scroll
                 return
             }
-            if (target.tagName === "svg" && target.id == "indexButton") {
+            if (target.id == "indexButton") {
                 event.preventDefault()
                 handleHashChange("", true)
+                return
+            }
+            if(target.id == "scrollDown"){
+                event.preventDefault()
+                handleHashChange("about", true)
                 return
             }
         };
@@ -294,13 +298,13 @@ function Index(): JSX.Element {
                             Contact
                         </div>
                         <div className="max-w-screen  md:w-4xl p-4 text-base text-justify md:text-center md:text-lg ">
-                            <div className="md:text-2xl text-xl pb-3 ">
+                            <div className="md:text-2xl text-xl pb-3 text-center">
                                 You can contact us at: 
                                 <br /><a href="mailto:team@no-on.hu" className="text-primary-400">team@no-on.hu</a>  <br />
                                 or <br />
                                 <a href="mailto:robocup.noon@gmail.com" className="text-primary-400">robocup.noon@gmail.com</a>
 
-                                <hr className="mx-20" />
+                                <hr className="mx-20 my-4" />
                             </div>
 
                             We’d be happy to answer your questions — feel free to reach out!
