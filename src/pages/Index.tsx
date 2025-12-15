@@ -164,7 +164,7 @@ function Index(): JSX.Element {
                         <div className="max-w-screen md:w-3xl flex *:m-3 flex-wrap place-content-around">
                             <Member
 
-                                imgSource="pictures/members/kara-crop.png"
+                                imgSource="pictures/members/kara-crop.webp"
                                 description="Multimedia and Creative Designer"
                                 name="Ádám Kara"
                                 website="http://adytm.eu/"
@@ -178,35 +178,35 @@ function Index(): JSX.Element {
                                 github="https://github.com/vBenii"
                             /> */}
                             <Member
-                                imgSource="pictures/members/hema-crop.png"
+                                imgSource="pictures/members/hema-crop.webp"
                                 description="Electrical Design and Embedded Development"
                                 name="Mátyás Nyilas"
                                 github="https://github.com/Hema2-official"
                                 school="University of Twente"
                             />
                             <Member
-                                imgSource="pictures/members/somfa-crop.png"
+                                imgSource="pictures/members/somfa-crop.webp"
                                 description="Web Development and Tactics Simulation"
                                 name="Máté Somfai"
                                 github="https://github.com/TheRealMattHUN"
                                 school="Lovassy László Gymnasium"
                             />
                             <Member
-                                imgSource="pictures/members/miki-crop.png"
+                                imgSource="pictures/members/miki-crop.webp"
                                 description="Web Development, Outreach, and Machine learning"
                                 name="Miklós Varga"
                                 github="https://github.com/Utelagazkodas"
                                 school="Lovassy László Gymnasium"
                             />
                             <Member
-                                imgSource="pictures/members/samu-crop.png"
+                                imgSource="pictures/members/samu-crop.webp"
                                 description="Electrical Design, Embedded Development and 3D design"
                                 name="Sámuel Virgo"
                                 github="https://github.com/samthedev32"
                                 school="Lovassy László Gymnasium"
                             />
                             <Member
-                                imgSource="pictures/members/zeti-crop.png"
+                                imgSource="pictures/members/zeti-crop.webp"
                                 description="Tactics Development and 3D Design"
                                 name="Zétény Fenyvesvölgyi"
                                 github="https://github.com/Gaplaster3600"
@@ -244,6 +244,10 @@ function Index(): JSX.Element {
                                             </div>
                                         </div>
                                     </p>
+                                    
+                                </div>
+                                <div className="flex justify-center">
+                                <a href="https://cad.onshape.com/documents/020d197daa00ade3be93673c/w/0c373a8929754e4d8a36e708/e/b81b2e91174ddea71b2f8e81" className="bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop">Check our 3D Models on Onshape!</a>
                                 </div>
                             </div>
 
@@ -253,13 +257,13 @@ function Index(): JSX.Element {
                                     We’re developing a <a href="https://github.com/team-noon/tactics-sim" className="underline">Tactics Simulation</a> tool to test and refine strategies that will control our robots during real competitions.
                                 </p>
                                 <div className="flex flex-wrap items-center justify-center m-2">
-                                    <img src="/pictures/documentation/tacticsim.png" className="w-[300px] rounded-2xl" />
+                                    <img src="/gifs/tacticsim.webp" className="w-[300px] rounded-2xl" />
                                     <div className="text-surface-300 text-center md:text-left md:p-2">
                                         <div className="underline ">Sneak peek of the tactics sim</div>
-                                        <div>
+                                        <div className="max-w-[26rem]">
                                             Red - The Ball 
                                             <br />
-                                            Shades of Blue - The robots
+                                            Green and Blue team playing against eachother, when their color changes that means they cant move.
                                             <br />
                                             The lines coming out of them represent their velocity
                                         </div>
