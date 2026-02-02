@@ -291,20 +291,25 @@ function Index(): JSX.Element {
                             <hr className="mt-8 border-surface-300 md:mx-8" />
 
                             <div className="flex items-center flex-col *:">
-                                <div className="text-2xl mt-5 font-semibold">
-                                    You can read more about us below!
+                                <div className="text-2xl my-5 font-semibold">
+                                    You can watch our technical video...
                                 </div>
 
-                                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kb_QifjKcvU?si=mYZVxxImEwNUU6bN" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kb_QifjKcvU?si=mYZVxxImEwNUU6bN" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" className="rounded-2xl" allowFullScreen></iframe>
 
+                                <div className="text-2xl mt-5 font-semibold">
+                                    ...or read more about us!
+                                </div>
 
-                                <a href="https://docs.google.com/document/d/1YPM1EzlZLIFmAyXTJZOxc3lrpaGzJnXO86ZKA5H6EsU/edit?usp=sharing" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop text-xl">Read our team intro!</a>
+                                <div className="flex *:m-2 mt-5 flex-wrap justify-center">
 
-                                <a href="https://docs.google.com/document/d/1YPM1EzlZLIFmAyXTJZOxc3lrpaGzJnXO86ZKA5H6EsU/edit?usp=sharing" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop text-xl">Read our team intro!</a>
+                                    <a href="https://docs.google.com/document/d/1YPM1EzlZLIFmAyXTJZOxc3lrpaGzJnXO86ZKA5H6EsU/edit?usp=sharing" className=" bg-tertiary-950/80 p-2 border-tertiary-contrast-950 rounded-xl  border backdrop-blur-sm backdrop text-xl">Team Intro</a>
 
-                                <a href="https://docs.google.com/document/d/1YPM1EzlZLIFmAyXTJZOxc3lrpaGzJnXO86ZKA5H6EsU/edit?usp=sharing" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop text-xl">Read our team intro!</a>
+                                    <a href="https://docs.google.com/document/d/1xu7VoU-IdebSXu6FvTU2OfjumOfcp1lmZScoUTojXqo/edit?usp=sharing" className=" bg-tertiary-950/80 p-2 border-tertiary-contrast-950 rounded-xl border backdrop-blur-sm backdrop text-xl">Team Description Paper</a>
 
+                                    <a href="https://docs.google.com/document/d/1Mnh9JsV1TxLKQaLV69aQU6UfBrCO7qWHsKpIuQMhZE8/edit?usp=sharing" className=" bg-tertiary-950/80 p-2 border-tertiary-contrast-950 rounded-xl border backdrop-blur-sm backdrop text-xl">Hardware Specification</a>
 
+                                </div>
 
 
 
@@ -345,9 +350,19 @@ function Index(): JSX.Element {
                 </div>
 
             </div>
+
+            {/*<div className="absolute top-0 -left-[100vw] text-9xl  h-screen from-amber-900 to-amber-700 bg-gradient-to-l text-pink-500">
+                                            1
+            </div>
+            <div className="absolute top-0 left-0 text-9xl  h-screen from-amber-900 to-amber-700 bg-gradient-to-l text-pink-500">
+                                            2
+            </div>*/}
+
             <Experience className="transition-none" width="100vw" height="100vh">
                 <Background offset={offset} maxOffset={maxOffset} scrollMaxHeight={scrollMaxHeight} />
             </Experience>
+
+
         </div>
     );
 }
