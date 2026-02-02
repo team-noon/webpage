@@ -73,7 +73,7 @@ function Index(): JSX.Element {
             lastHash = hash;
             if (element) {
                 history.pushState(null, "", `#${hash}`); // Update URL without triggering default jump
-                
+
                 element.scrollIntoView({ behavior: "smooth", block: "start" });
 
             }
@@ -90,7 +90,7 @@ function Index(): JSX.Element {
         const interceptAnchorClicks = (event: MouseEvent) => {
             const target = event.target as HTMLAnchorElement;
 
-            if (target.tagName === "A" && (target.hash || target.hash == "") && (target.id == "topbar" || target.id=="scrollDown")) {
+            if (target.tagName === "A" && (target.hash || target.hash == "") && (target.id == "topbar" || target.id == "scrollDown")) {
                 event.preventDefault(); // Stop default hash jump
                 handleHashChange(target.hash.substring(1), true); // Manually smooth scroll
                 return
@@ -100,7 +100,7 @@ function Index(): JSX.Element {
                 handleHashChange("", true)
                 return
             }
-            if(target.id == "scrollDown"){
+            if (target.id == "scrollDown") {
                 event.preventDefault()
                 handleHashChange("about", true)
                 return
@@ -130,7 +130,7 @@ function Index(): JSX.Element {
 
                     <TitleComp />
                     <SponsorButton href="https://www.unitree.hu/" className="left-3 top-4/12 md:left-12" size={isMobile ? "128px" : "20vw"}>
-                        <img src="/pictures/logos/infuze.png"/>
+                        <img src="/pictures/logos/infuze.png" />
                     </SponsorButton>
 
                     <SponsorButton href="https://www.maxongroup.com/" size={isMobile ? "128px" : "20vw"} className="right-3 md:right-12 top-4/12">
@@ -226,11 +226,11 @@ function Index(): JSX.Element {
                             <div>
                                 <div className="font-semibold text-2xl text-center">Hardware</div>
                                 <div className="mt-2">
-                                    <div className="font-medium text-lg">Electronics</div>
+                                    <div className="font-semibold text-xl">Electronics</div>
                                     <p>
                                         We’re designing custom PCBs that will be mounted in both the head and body of the robot. For now, we’re prototyping on a development board to work out the quirks of the CPU, motors, and drivers.
                                     </p>
-                                    <div className="font-medium mt-3 text-lg">Body</div>
+                                    <div className="mt-3 font-semibold text-lg">Body</div>
                                     <p>
                                         The robot’s frame will use carbon fiber rods combined with custom 3D-printed parts (both FDM and SLA). The render you see in the website background (and below) is a mockup with roughly correct proportions, created primarily for balancing tests.
                                         <div className="flex items-center justify-center">
@@ -244,10 +244,10 @@ function Index(): JSX.Element {
                                             </div>
                                         </div>
                                     </p>
-                                    
+
                                 </div>
                                 <div className="flex justify-center">
-                                <a href="https://cad.onshape.com/documents/020d197daa00ade3be93673c/w/0c373a8929754e4d8a36e708/e/b81b2e91174ddea71b2f8e81" className="bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop">Check our 3D Models on Onshape!</a>
+                                    <a href="https://cad.onshape.com/documents/020d197daa00ade3be93673c/w/0c373a8929754e4d8a36e708/e/b81b2e91174ddea71b2f8e81" className="bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop">Check our 3D Models on Onshape!</a>
                                 </div>
                             </div>
 
@@ -261,7 +261,7 @@ function Index(): JSX.Element {
                                     <div className="text-surface-300 text-center md:text-left md:p-2">
                                         <div className="underline ">Sneak peek of the tactics sim</div>
                                         <div className="max-w-[26rem]">
-                                            Red - The Ball 
+                                            Red - The Ball
                                             <br />
                                             Green and Blue team playing against eachother, when their color changes that means they cant move.
                                             <br />
@@ -289,8 +289,25 @@ function Index(): JSX.Element {
                             </div>
 
                             <hr className="mt-8 border-surface-300 md:mx-8" />
-                            <div className="my-8 text-center text-xl">
-                                <a href="https://docs.google.com/document/d/1YPM1EzlZLIFmAyXTJZOxc3lrpaGzJnXO86ZKA5H6EsU/edit?usp=sharing" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop">Read more about us!</a>
+
+                            <div className="flex items-center flex-col *:">
+                                <div className="text-2xl mt-5 font-semibold">
+                                    You can read more about us below!
+                                </div>
+
+                                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kb_QifjKcvU?si=mYZVxxImEwNUU6bN" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+
+
+                                <a href="https://docs.google.com/document/d/1YPM1EzlZLIFmAyXTJZOxc3lrpaGzJnXO86ZKA5H6EsU/edit?usp=sharing" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop text-xl">Read our team intro!</a>
+
+                                <a href="https://docs.google.com/document/d/1YPM1EzlZLIFmAyXTJZOxc3lrpaGzJnXO86ZKA5H6EsU/edit?usp=sharing" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop text-xl">Read our team intro!</a>
+
+                                <a href="https://docs.google.com/document/d/1YPM1EzlZLIFmAyXTJZOxc3lrpaGzJnXO86ZKA5H6EsU/edit?usp=sharing" className=" bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop text-xl">Read our team intro!</a>
+
+
+
+
+
                             </div>
 
                         </div>
@@ -303,7 +320,7 @@ function Index(): JSX.Element {
                         </div>
                         <div className="max-w-screen  md:w-4xl p-4 text-base text-justify md:text-center md:text-lg ">
                             <div className="md:text-2xl text-xl pb-3 text-center">
-                                You can contact us at: 
+                                You can contact us at:
                                 <br /><a href="mailto:team@no-on.hu" className="text-primary-400">team@no-on.hu</a>  <br />
                                 or <br />
                                 <a href="mailto:robocup.noon@gmail.com" className="text-primary-400">robocup.noon@gmail.com</a>
