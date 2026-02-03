@@ -247,7 +247,7 @@ function Index(): JSX.Element {
 
                                 </div>
                                 <div className="flex justify-center">
-                                    <a href="https://cad.onshape.com/documents/020d197daa00ade3be93673c/w/0c373a8929754e4d8a36e708/e/b81b2e91174ddea71b2f8e81" className="bg-primary-500/80 p-2 rounded-xl border backdrop-blur-sm backdrop">Check our 3D Models on Onshape!</a>
+                                    <a href="https://cad.onshape.com/documents/020d197daa00ade3be93673c/w/0c373a8929754e4d8a36e708/e/b81b2e91174ddea71b2f8e81" className="bg-tertiary-950/80 p-2 border-tertiary-contrast-950 rounded-xl border backdrop-blur-sm backdrop text-xl">Check our 3D Models on Onshape!</a>
                                 </div>
                             </div>
 
@@ -351,10 +351,10 @@ function Index(): JSX.Element {
 
             </div>
 
-            {/*<div className="absolute top-0 -left-[100vw] text-9xl  h-screen from-amber-900 to-amber-700 bg-gradient-to-l text-pink-500">
+            {/*<div className="absolute top-0 -left-[100vw] text-9xl  h-screen from-amber-900 to-amber-700 bg-gradient-to-l text-pink-500 scroll-right-bg">
                                             1
             </div>
-            <div className="absolute top-0 left-0 text-9xl  h-screen from-amber-900 to-amber-700 bg-gradient-to-l text-pink-500">
+            <div className="absolute top-0 left-0 text-9xl  h-screen from-amber-900 to-amber-700 bg-gradient-to-l text-pink-500 scroll-right-bg">
                                             2
             </div>*/}
 
