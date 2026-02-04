@@ -7,6 +7,7 @@ import Member from "../components/Member";
 import Draggable from "../3dcomponents/Draggable";
 import { RobotModel } from "../3dcomponents/Mockup assembly";
 import SponsorButton from "../components/SponsorButton";
+import ScrollingBG from "../components/ScrollingBG";
 
 const Experience = lazy(() => import('../components/Experience'))
 const Background = lazy(() => import("../3dcomponents/Background"))
@@ -291,13 +292,13 @@ function Index(): JSX.Element {
                             <hr className="mt-8 border-surface-300 md:mx-8" />
 
                             <div className="flex items-center flex-col *:">
-                                <div className="text-2xl my-5 font-semibold">
+                                <div className="text-2xl my-5 font-semibold text-center">
                                     You can watch our technical video...
                                 </div>
 
-                                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kb_QifjKcvU?si=mYZVxxImEwNUU6bN" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" className="rounded-2xl" allowFullScreen></iframe>
+                                <iframe width="80%" src="https://www.youtube-nocookie.com/embed/kb_QifjKcvU?si=mYZVxxImEwNUU6bN" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" className="rounded-2xl aspect-video" allowFullScreen></iframe>
 
-                                <div className="text-2xl mt-5 font-semibold">
+                                <div className="text-2xl mt-5 font-semibold text-center">
                                     ...or read more about us!
                                 </div>
 
@@ -351,12 +352,7 @@ function Index(): JSX.Element {
 
             </div>
 
-            {/*<div className="absolute top-0 -left-[100vw] text-9xl  h-screen from-amber-900 to-amber-700 bg-gradient-to-l text-pink-500 scroll-right-bg">
-                                            1
-            </div>
-            <div className="absolute top-0 left-0 text-9xl  h-screen from-amber-900 to-amber-700 bg-gradient-to-l text-pink-500 scroll-right-bg">
-                                            2
-            </div>*/}
+            <ScrollingBG windowWidth={windowDimensions.width}/>
 
             <Experience className="transition-none" width="100vw" height="100vh">
                 <Background offset={offset} maxOffset={maxOffset} scrollMaxHeight={scrollMaxHeight} />
