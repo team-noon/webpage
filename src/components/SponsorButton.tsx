@@ -12,7 +12,7 @@ export default function SponsorButton({children, href, className, size} : sponso
 
     const [hovered, setHovered] = useState(false)
 
-    return (<a onMouseEnter={()=>{setHovered(true)}} onMouseLeave={()=>{ setRotation((Math.random() - 0.5) * 10); setHovered(false)}} className={`absolute hover:cursor-pointer flex items-center justify-center hover:scale-125 transition-all duration-150 ${className}`} style={{width: size, rotate: hovered ? `${rotation}deg` : "0deg"}} href={href}>
+    return (<a onMouseEnter={()=>{setHovered(true)}} onMouseLeave={()=>{ setRotation((Math.random() - 0.5) * 10); setHovered(false)}} className={`absolute hover:cursor-pointer flex items-center justify-center hover:scale-125 transition-all duration-150 -translate-y-[50%] ${className}`} style={{width: size, rotate: hovered ? `${rotation}deg` : "0deg"}} href={href}>
         {children}
     </a>)
 }

@@ -2,12 +2,12 @@ import { lazy, useEffect, useState } from "react";
 import Topbar from "../components/TopbarMain";
 import ScrollDown from "../components/ScrollDown";
 import colors from "../colors";
-import TitleComp from "../components/Title/TitleComp";
 import Member from "../components/Member";
 import Draggable from "../3dcomponents/Draggable";
 import { RobotModel } from "../3dcomponents/Mockup assembly";
 import SponsorButton from "../components/SponsorButton";
 import ScrollingBG from "../components/ScrollingBG";
+import ColorBG from "../components/ColorBG";
 
 const Experience = lazy(() => import('../components/Experience'))
 const Background = lazy(() => import("../3dcomponents/Background"))
@@ -129,12 +129,12 @@ function Index(): JSX.Element {
                 {/* TITLE SCREEN */}
                 <div className="flex place-content-center items-center relative min-h-screen" id="index">
 
-                    <TitleComp />
-                    <SponsorButton href="https://www.unitree.hu/" className="left-3 top-4/12 md:left-12" size={isMobile ? "128px" : "20vw"}>
+                    {/*<TitleComp />*/}
+                    <SponsorButton href="https://www.unitree.hu/" className="left-3 top-[15%] md:left-12 " size={isMobile ? "150px" : "20vw"}>
                         <img src="/pictures/logos/infuze.png" />
                     </SponsorButton>
 
-                    <SponsorButton href="https://www.maxongroup.com/" size={isMobile ? "128px" : "20vw"} className="right-3 md:right-12 top-4/12">
+                    <SponsorButton href="https://www.maxongroup.com/" size={isMobile ? "150px" : "20vw"} className="right-3 md:right-12 top-[15%] ">
                         <img src="/pictures/logos/maxon.png" />
                     </SponsorButton>
 
@@ -351,8 +351,10 @@ function Index(): JSX.Element {
                 </div>
 
             </div>
+            
+           <ColorBG isMobile={isMobile}/>
 
-            <ScrollingBG windowWidth={windowDimensions.width}/>
+            <ScrollingBG />
 
             <Experience className="transition-none" width="100vw" height="100vh">
                 <Background offset={offset} maxOffset={maxOffset} scrollMaxHeight={scrollMaxHeight} />

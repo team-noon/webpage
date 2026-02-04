@@ -288,9 +288,10 @@ html {
 	transition: all;
 }
 
-.scrollingBG {
+
+/*.scrollingBG {
 	animation-name: myAnimation;
-	animation-duration: 10s;
+	animation-duration: 2s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
@@ -301,6 +302,135 @@ html {
 	}
 
 	to {
-		transform: translateX(100vw);
+		transform: translateX(200px);
+	}
+}*/
+
+.scrollingBG {
+	background-image: url(/pictures/logos/noonLogoLight.webp);
+	background-size: calc(max(25vw, 200px));
+	animation-name: BGScroll;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	background-repeat: repeat-x;
+	-moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	-o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	-webkit-filter: grayscale(75%);
+	filter: grayscale(75%);
+}
+
+@keyframes BGScroll {
+	from {
+		background-position-x: 0px;
+	}
+
+	to {
+		background-position-x: calc(max(25vw, 200px));
 	}
 }
+
+.BGColor {
+	position: absolute;
+	width: 30vw;
+	height: 30vh;
+}
+
+
+
+@keyframes BGColorSpin1 {
+	from {
+		transform: rotateZ(180deg);
+	}
+
+	to {
+		transform: rotateZ(-180deg);
+	}
+}
+
+.BGColor-1 {
+		animation-name: BGColorSpin1;
+		animation-duration: 60s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+	top: 200px;
+	right: 100px;
+	border-radius:
+		72% 48% 65% 35% /
+		28% 72% 41% 59%;
+
+	background:
+		radial-gradient(
+			at 30% 30%,
+			var(--color-secondary-400),
+			var(--color-primary-500) 45%,
+			var(--color-tertiary-600) 75%
+		);
+
+}
+
+@keyframes BGColorSpin2 {
+	
+	from {
+		transform: rotateZ(-180deg);
+	}
+
+	to {
+		transform: rotateZ(180deg);
+	}
+}
+
+.BGColor-2 {
+	animation-name: BGColorSpin2;
+		animation-duration: 45s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+	top: 150px;
+	border-radius:
+		45% 55% 38% 62% /
+		60% 30% 70% 40%;
+
+	background:
+		linear-gradient(
+			135deg,
+			var(--color-tertiary-400),
+			var(--color-primary-400),
+			var(--color-primary-600)
+		);
+}
+
+@keyframes BGColorSpin3 {
+	from {
+		transform: rotateZ(-180deg);
+	}
+
+	to {
+		transform: rotateZ(180deg);
+	}
+}
+
+.BGColor-3 {
+	animation-name: BGColorSpin3;
+		animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+	top: 500px;
+	right: 40%;
+
+	border-radius:
+		33% 67% 58% 42% /
+		47% 63% 37% 53%;
+	scale: 180% 100%;
+
+	background:
+		radial-gradient(
+			at 70% 40%,
+			var(--color-primary-300),
+			var(--color-tertiary-700) 55%,
+			var(--color-surface-800) 85%
+		);
+}
+
