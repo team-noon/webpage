@@ -288,3 +288,19 @@ html {
 	transition: all;
 }
 
+.scrollingBG {
+	animation-name: myAnimation;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes myAnimation {
+	from {
+		transform: translateX(0px);
+	}
+
+	to {
+		transform: translateX(100vw);
+	}
+}

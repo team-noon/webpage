@@ -7,30 +7,28 @@ interface ScrollingBGInterface {
 
 export default function ScrollingBG({ windowWidth }: ScrollingBGInterface): JSX.Element {
     const [offset, setOffset] = useState(0)
-    setInterval(() => {
+
+    /*setInterval(() => {
         setOffset(offset+0.1)
-    }, 1000 / 100)
+    }, 1000 / 100)*/
 
-    return (<div className="absolute top-[50%]">
+    return (<div className="absolute top-[50%] flex scrollingBG *:m-0 *:p-0 m-0 p-0">
 
-        <div className="flex -translate-y-[50%]" style={{transform:`translate(${offset}px, 0px)`}}>
-            {[...Array(Math.ceil(windowWidth/200)+2)].map((x, i) =>
-                <img src="/pictures/logos/noonLogoLight.webp" width={"150px"}/>
+        {/*<span className="flex -translate-y-[50%] -translate-x-[100vw]">
+            {[...Array(Math.ceil(windowWidth / 250) + 2)].map((x, i) =>
+                <img src="/pictures/logos/noonLogoLight.webp" width={"250px"} />
             )}
 
-        </div>
-        <div className="flex -translate-y-[150%]">
-            {[...Array(Math.ceil(windowWidth/200)+2)].map((x, i) =>
-                <img src="/pictures/logos/noonLogoLight.webp" width={"250px"}/>
+        </span>
+        <span className="flex -translate-y-[50%]" style={{ transform: `translate(${offset}px, 0px)` }}>
+            {[...Array(Math.ceil(windowWidth / 250) + 2)].map((x, i) =>
+                <img src="/pictures/logos/noonLogoLight.webp" width={"250px"} />
             )}
 
-        </div>
-        <div className="flex -translate-y-[250%]">
-            {[...Array(Math.ceil(windowWidth/200)+2)].map((x, i) =>
-                <img src="/pictures/logos/noonLogoLight.webp" width={"350px"}/>
-            )}
+        </span>*/}
 
-        </div>
+        
+
 
     </div>)
 }
