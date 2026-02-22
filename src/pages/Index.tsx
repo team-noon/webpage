@@ -138,7 +138,7 @@ function Index(): JSX.Element {
                         <img src="/pictures/logos/maxon.png" />
                     </SponsorButton>
 
-                    <SponsorButton href="https://www.maxongroup.com/" size={isMobile ? "150px" : "20vw"} className="right-3 top-[15%] md:right-12">
+                    <SponsorButton href="https://www.hestore.hu/index.php" size={isMobile ? "150px" : "20vw"} className="right-3 top-[15%] md:right-12">
                         <img src="/pictures/logos/hestore.png" />
                     </SponsorButton> 
 
