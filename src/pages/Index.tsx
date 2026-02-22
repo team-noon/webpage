@@ -134,13 +134,13 @@ function Index(): JSX.Element {
                         <img src="/pictures/logos/infuze.png" />
                     </SponsorButton>
 
-                    <SponsorButton href="https://www.maxongroup.com/" size={isMobile ? "150px" : "20vw"} className="right-3 md:right-12 top-[15%] ">
+                    <SponsorButton href="https://www.maxongroup.com/" size={isMobile ? "200px" : "20vw"} className=" md:top-[15%] bottom-[20%] ">
                         <img src="/pictures/logos/maxon.png" />
                     </SponsorButton>
 
-                    {/*<SponsorButton href="https://www.maxongroup.com/" size={isMobile ? 32 : 64} className="left-3 md:left-12 top-[45%] md:top-[70%]">
+                    <SponsorButton href="https://www.maxongroup.com/" size={isMobile ? "150px" : "20vw"} className="right-3 top-[15%] md:right-12">
                         <img src="/pictures/logos/hestore.png" />
-                    </SponsorButton> */}
+                    </SponsorButton> 
 
                     <ScrollDown scrollOffset={offset} disappear={100} color={colors.primary500} />
                 </div>
